@@ -1,27 +1,38 @@
 ---
-title: "GOPLC HMI Demo - Building Operator Interfaces"
-description: "A walkthrough of GOPLC's built-in HMI capabilities for creating simple, effective operator interfaces directly from the PLC runtime."
+title: "GOPLC HMI Demo - Built-In Operator Interface"
+description: "A quick demo of GOPLC's built-in HMI capabilities showing three independent tasks with different scan rates, counters, and start/stop controls."
 date: 2026-02-20
 tags: ["GOPLC", "HMI", "video"]
 ---
 
-One of GOPLC's strengths is the ability to build operator interfaces without needing separate HMI software. This demo shows how to create a simple HMI directly within the GOPLC environment.
+A simple demo of the built-in HMI capabilities in GOPLC. No separate HMI software needed - the operator interface runs directly from the PLC runtime in a web browser.
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 2rem 0;">
   <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 12px;" src="https://www.youtube-nocookie.com/embed/2BMwAaTl1xo" title="GOPLC simple HMI demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-## What's Shown
+## What's in the Demo
 
-The video demonstrates creating an operator-facing HMI panel using GOPLC's integrated tools. Rather than requiring a separate SCADA or HMI package, GOPLC provides built-in visualization capabilities that run directly alongside the PLC logic.
+The video shows three PLC tasks running simultaneously in GOPLC, each configured with:
 
-This approach simplifies the architecture - one runtime handles both control logic and operator interface, reducing the number of moving parts in a system.
+- **Different scan rates** - Each task executes at its own cycle time
+- **Independent counters** - Each task maintains its own count value
+- **Start/Stop controls** - Each task can be started and stopped independently
+- **Reset function** - Counters can be reset individually
 
-## Why It Matters
+This demonstrates a key concept in GOPLC: **multi-task execution**. Unlike simple PLCs that run a single program loop, GOPLC supports multiple concurrent tasks at different priorities and scan rates - from 100 microseconds up to hours.
 
-In traditional automation, you need separate software licenses for PLC programming and HMI development. GOPLC combines both into a single platform, which means:
+## Why Built-In HMI Matters
 
-- **Fewer licenses** to manage
-- **Tighter integration** between control logic and display
-- **Faster development** since everything lives in one environment
-- **Web-based access** from any browser on the network
+In a traditional setup, you'd need:
+1. PLC programming software to write the logic
+2. Separate HMI/SCADA software to build the operator interface
+3. A communication driver to link them together
+
+GOPLC eliminates steps 2 and 3. The HMI is built into the runtime and served over the web. Open a browser, point it at the PLC, and you have your operator interface. No additional licenses, no driver configuration, no separate engineering tool.
+
+This is especially useful for:
+- **Quick commissioning** - Get a working interface up in minutes
+- **Remote monitoring** - Access from any device with a browser
+- **Small systems** - Where a full SCADA package is overkill
+- **Prototyping** - Build and test interfaces alongside your control logic
