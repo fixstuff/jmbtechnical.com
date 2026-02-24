@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const projects = [
+  {
+    title: 'GOPLC Runtime',
+    category: 'Software Platform',
+    description: 'Complete IEC 61131-3 PLC runtime written in Go. 180,000+ lines of code with web-based IDE, step debugger, 1,450+ built-in functions, and 14 industrial protocol drivers. Supports Boss/Minion clustering with 10,000+ concurrent instances.',
+    tech: ['Go', 'IEC 61131-3', 'Monaco Editor', 'WebSocket', 'Node-RED', 'Docker'],
+    highlights: ['180K+ lines of code', '14 protocol drivers', 'AI agentic control', 'Clustered deployment'],
+    github: 'https://github.com/fixstuff/GOPLC-Showcase',
+    featured: true,
+  },
+  {
+    title: 'Modbus TCP Client/Server Suite',
+    category: 'Protocol Testing',
+    description: 'Comprehensive Python-based Modbus TCP testing platform with dual-interface architecture. Client Manager connects to devices while Server Manager hosts virtual Modbus servers for development and testing.',
+    tech: ['Python', 'Flask', 'pymodbus', 'REST API', 'Docker'],
+    highlights: ['Multi-server operation', 'Waveform simulation', 'Protocol diagnostics', 'CSV data export'],
+    github: 'https://github.com/fixstuff/Modbus-ClientServer-Showcase',
+  },
+  {
+    title: 'EtherNet/IP Scanner & Adapter',
+    category: 'Protocol Testing',
+    description: 'Full EtherNet/IP testing platform with Scanner (client) and Adapter (server) components. Supports Allen-Bradley PLCs, tag discovery, UDT management, and both explicit and implicit messaging.',
+    tech: ['Python', 'Flask', 'pycomm3', 'cpppo', 'CIP Protocol'],
+    highlights: ['Tag discovery', 'UDT support', 'Implicit I/O', 'Multi-device connections'],
+    github: 'https://github.com/fixstuff/EthernetIP_ScannerAdapter-Showcase',
+  },
+  {
+    title: 'Omron FINS Client/Server',
+    category: 'Protocol Testing',
+    description: 'Python-based FINS protocol testing platform for Omron PLC communication. Virtual FINS servers with configurable memory areas, protocol diagnostics with microsecond-precision timing, and packet analysis.',
+    tech: ['Python', 'Flask', 'FINS Protocol', 'TCP/UDP'],
+    highlights: ['Memory simulation', 'Packet analysis', 'TCP & UDP support', 'Timing diagnostics'],
+    github: 'https://github.com/fixstuff/Omron-ClientServer-Showcase',
+  },
+  {
+    title: 'ScanForge',
+    category: 'Trading Platform',
+    description: 'AI-powered trading analysis platform integrating quantitative analysis, options flow, news sentiment, and backtested signals. Features Monte Carlo simulation, paper trading, and multi-AI scoring system.',
+    tech: ['Python', 'Flask', 'FastAPI', 'Claude AI', 'Polygon.io'],
+    highlights: ['34K+ historical samples', 'Monte Carlo simulation', 'Multi-AI scoring', 'Paper trading'],
+    github: 'https://github.com/fixstuff/ScanForge-Showcase',
+  },
+  {
+    title: 'MDRobot',
+    category: 'Robotics',
+    description: 'Embedded robotics project using C++ for motor control and sensor integration. Designed for automated material handling and inspection applications.',
+    tech: ['C++', 'Embedded', 'Motor Control', 'Sensors'],
+    highlights: ['Real-time control', 'Sensor fusion', 'Autonomous operation'],
+    github: 'https://github.com/fixstuff/MDRobot',
+  },
+];
+---
+
+<BaseLayout title="Projects" description="Portfolio of industrial automation, software platforms, and protocol development projects.">
+  <section class="bg-primary-dark text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-6">Projects</h1>
+        <p class="text-xl text-gray-300 leading-relaxed">
+          A selection of software platforms, protocol implementations, and automation projects.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-8">
+        {projects.map((project) => (
+          <div class:list={[
+            'bg-white rounded-2xl border overflow-hidden hover:shadow-lg transition-shadow',
+            project.featured ? 'border-accent/30' : 'border-gray-100',
+          ]}>
+            {project.featured && (
+              <div class="bg-accent/10 px-6 py-2 border-b border-accent/20">
+                <span class="text-accent text-sm font-semibold">Featured Project</span>
+              </div>
+            )}
+            <div class="p-8">
+              <div class="flex flex-wrap items-start justify-between gap-4 mb-4">
+                <div>
+                  <span class="text-xs font-medium text-accent uppercase tracking-wider">{project.category}</span>
+                  <h3 class="text-2xl font-bold text-primary-dark mt-1">{project.title}</h3>
+                </div>
+                {project.github && (
+                  <a href={project.github} target="_blank" rel="noopener" class="text-gray-400 hover:text-primary transition-colors" aria-label={`View ${project.title} on GitHub`}>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  </a>
+                )}
+              </div>
+
+              <p class="text-text-light mb-6 leading-relaxed">{project.description}</p>
+
+              {project.highlights && (
+                <div class="flex flex-wrap gap-x-6 gap-y-2 mb-6">
+                  {project.highlights.map((h) => (
+                    <div class="flex items-center gap-2 text-sm text-text">
+                      <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                      {h}
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              <div class="flex flex-wrap gap-2">
+                {project.tech.map((t) => (
+                  <span class="bg-gray-100 text-text text-xs px-3 py-1 rounded-full">{t}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
