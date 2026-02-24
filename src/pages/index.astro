@@ -1,5 +1,20 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Carousel from '../components/Carousel.astro';
+
+const showcaseSlides = [
+  { image: '/images/showcase/goplc-web-ide.png', title: 'Web-Based IDE with Monaco Editor', project: 'GOPLC' },
+  { image: '/images/showcase/goplc-ide-features.png', title: 'IDE Features & Code Navigation', project: 'GOPLC' },
+  { image: '/images/showcase/goplc-monitor-variables.png', title: 'Live Variable Monitoring', project: 'GOPLC' },
+  { image: '/images/showcase/scanforge-dashboard.png', title: 'Analysis Dashboard', project: 'ScanForge' },
+  { image: '/images/showcase/scanforge-backtest.png', title: 'Backtest Analyzer', project: 'ScanForge' },
+  { image: '/images/showcase/modbus-server-manager.png', title: 'Modbus Server Manager', project: 'Modbus Suite' },
+  { image: '/images/showcase/modbus-client-manager.png', title: 'Modbus Client Manager', project: 'Modbus Suite' },
+  { image: '/images/showcase/enip-scanner.png', title: 'EtherNet/IP Scanner', project: 'EtherNet/IP Suite' },
+  { image: '/images/showcase/enip-adapter.png', title: 'EtherNet/IP Adapter', project: 'EtherNet/IP Suite' },
+  { image: '/images/showcase/fins-server.png', title: 'FINS Server Manager', project: 'Omron FINS Suite' },
+  { image: '/images/showcase/fins-client.png', title: 'FINS Client Manager', project: 'Omron FINS Suite' },
+];
 ---
 
 <BaseLayout title="Industrial Automation & Controls Engineering">
@@ -125,8 +140,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- Featured Project -->
+  <!-- Project Showcase Carousel -->
   <section class="py-20 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4">Project Showcase</h2>
+        <p class="text-lg text-text-light max-w-2xl mx-auto">
+          Screenshots from software platforms and tools built for industrial automation
+        </p>
+      </div>
+      <Carousel slides={showcaseSlides} />
+    </div>
+  </section>
+
+  <!-- Featured Project -->
+  <section class="py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4">Featured Project</h2>
