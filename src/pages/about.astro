@@ -88,7 +88,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           { period: '2025 - Present', title: 'Technical Specialist IV', org: 'McDean Inc.', desc: 'Subject matter specialist for SCADA and water technology initiatives.' },
           { period: '2024 - 2025', title: 'DCIM III Engineer', org: 'Quality Technology Services', desc: 'Lead DCIM engineer for data center campus infrastructure.' },
           { period: '2023 - 2024', title: 'Senior Controls Programmer', org: 'ITAC Corporation', desc: 'Water treatment systems, ceramic ultrafiltration, optimization algorithms.' },
-          { period: '2018 - 2023', title: 'Lead Controls Engineer', org: 'Industrial Control Systems', desc: 'VTScada flagship product, IQ System & IQ Vision development.' },
+          { period: '2022 - 2023', title: 'Application Specialist, Sr.', org: 'Bosch Rexroth', desc: 'Application and software support for Florida region customers.<br/>Legacy code conversion for production motion control systems.' },
+          { period: '2018 - 2022', title: 'Lead Controls Engineer', org: 'Industrial Control Systems', desc: 'VTScada flagship product, IQ System & IQ Vision development.' },
           { period: '2016 - 2018', title: 'Senior Controls Engineer', org: 'Blueprint Automation', desc: 'Rockwell-based Delta Robot packaging systems, modular coding standards.' },
           { period: '2014 - 2016', title: 'Senior Controls Engineer', org: 'HSQ Technology', desc: 'Mass transit SCADA, Railway Intruder Detection System (1,100+ sensors).' },
           { period: '2012 - 2014', title: 'Senior Controls Engineer', org: 'InMotion Robotics', desc: 'ABB robots, Cognex vision, automated pressure vessel manufacturing.' },
@@ -105,7 +106,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <div class="pb-8">
               <div class="font-bold text-primary-dark">{item.title}</div>
               <div class="text-sm text-accent font-medium">{item.org}</div>
-              <p class="text-text-light text-sm mt-1">{item.desc}</p>
+              <p class="text-text-light text-sm mt-1" set:html={item.desc}></p>
             </div>
           </div>
         ))}
