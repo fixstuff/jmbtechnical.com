@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import GoplcNav from '../../components/GoplcNav.astro';
+import Screenshot from '../../components/Screenshot.astro';
 ---
 
 <BaseLayout title="GOPLC - AI-Agentic PLC Runtime" description="The world's first AI-agentic PLC runtime. 180,000+ lines of Go, 14 protocol drivers, boss/minion clustering, and native AI integration. One binary. Unlimited scale.">
@@ -183,99 +184,17 @@ import GoplcNav from '../../components/GoplcNav.astro';
       </div>
 
       <div class="grid md:grid-cols-2 gap-8">
-        <!-- IDE Screenshot -->
-        <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-shadow">
-          <div class="overflow-hidden">
-            <img src="/images/showcase/goplc-web-ide.png" alt="GOPLC Web IDE" class="w-full" />
-          </div>
-          <div class="p-6">
-            <h3 class="text-lg font-bold text-primary-dark mb-2">Web-Based IDE</h3>
-            <p class="text-text-light text-sm">Monaco editor with full IEC 61131-3 support. No software to install &mdash; open a browser and start programming.</p>
-          </div>
+        <div>
+          <Screenshot src="/images/showcase/goplc-ide-online.png" alt="GOPLC Web IDE with online mode showing live variable values inline" caption="Web IDE with online mode &mdash; live values inline next to code" />
         </div>
-
-        <!-- Live Monitoring Screenshot -->
-        <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-shadow">
-          <div class="overflow-hidden">
-            <img src="/images/showcase/goplc-monitor-variables.png" alt="GOPLC Live Variable Monitoring" class="w-full" />
-          </div>
-          <div class="p-6">
-            <h3 class="text-lg font-bold text-primary-dark mb-2">Live Variable Monitoring</h3>
-            <p class="text-text-light text-sm">Real-time inline values via WebSocket. Color-coded types, expandable arrays, multiple simultaneous users.</p>
-          </div>
+        <div>
+          <Screenshot src="/images/showcase/goplc-dashboard.png" alt="GOPLC Dashboard with runtime state, task performance, and programs" caption="Dashboard &mdash; runtime state, task performance, and programs" />
         </div>
-
-        <!-- AI Code Gen Panel -->
-        <div class="bg-gray-900 rounded-xl overflow-hidden shadow-sm border border-gray-800 hover:shadow-lg transition-shadow">
-          <div class="p-6 border-b border-gray-800">
-            <div class="flex items-center gap-2 mb-4">
-              <div class="w-3 h-3 rounded-full bg-red-500"></div>
-              <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-              <div class="w-3 h-3 rounded-full bg-green-500"></div>
-              <span class="text-gray-500 text-xs ml-2">AI Assistant</span>
-            </div>
-            <div class="bg-gray-800 rounded-lg p-4 mb-4">
-              <p class="text-gray-400 text-sm italic">"Write a PID loop that reads analog input 0, maintains 75 degrees, and triggers an alarm above 95"</p>
-            </div>
-            <div class="text-green-400 font-mono text-sm leading-relaxed">
-              <pre class="overflow-x-auto"><code>PROGRAM Main
-VAR
-  sensor : REAL;
-  output : REAL;
-  alarm  : BOOL;
-END_VAR
-
-sensor := ReadAnalog(0);
-output := PID(
-  pv := sensor,
-  sp := 75.0,
-  kp := 1.2
-);
-WriteAnalog(0, output);
-alarm := sensor > 95.0;</code></pre>
-            </div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-lg font-bold text-white mb-2">AI Code Generation</h3>
-            <p class="text-gray-400 text-sm">Describe what you want in plain English. AI generates working ST code using all 1,600+ built-in functions.</p>
-          </div>
+        <div>
+          <Screenshot src="/images/showcase/goplc-ai-assistant.png" alt="GOPLC AI Assistant with Claude integration" caption="AI Assistant &mdash; Claude writes ST code from natural language" />
         </div>
-
-        <!-- Clustering Architecture Panel -->
-        <div class="bg-gray-900 rounded-xl overflow-hidden shadow-sm border border-gray-800 hover:shadow-lg transition-shadow">
-          <div class="p-6 border-b border-gray-800">
-            <div class="text-center py-4">
-              <div class="inline-block bg-accent/20 text-accent text-xs font-bold px-3 py-1 rounded-full mb-6">BOSS</div>
-              <div class="flex justify-center gap-1 mb-2">
-                <div class="w-px h-8 bg-gray-700"></div>
-              </div>
-              <div class="flex justify-center gap-3 flex-wrap">
-                {Array.from({length: 8}).map(() => (
-                  <div class="bg-[#00ADD8]/10 border border-[#00ADD8]/30 text-[#00ADD8] text-xs font-mono px-2 py-1 rounded">
-                    minion
-                  </div>
-                ))}
-              </div>
-              <div class="mt-6 flex justify-center gap-8 text-center">
-                <div>
-                  <div class="text-2xl font-extrabold text-accent">10,000+</div>
-                  <div class="text-gray-500 text-xs">instances</div>
-                </div>
-                <div>
-                  <div class="text-2xl font-extrabold text-[#00ADD8]">620K</div>
-                  <div class="text-gray-500 text-xs">scans/sec</div>
-                </div>
-                <div>
-                  <div class="text-2xl font-extrabold text-[#4ec9b0]">1.7&micro;s</div>
-                  <div class="text-gray-500 text-xs">latency</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-lg font-bold text-white mb-2">Boss/Minion Clustering</h3>
-            <p class="text-gray-400 text-sm">Scale from one PLC to thousands. Linear performance scaling at 95%+ efficiency to 500 nodes.</p>
-          </div>
+        <div>
+          <Screenshot src="/images/showcase/goplc-fleet-management.png" alt="GOPLC Fleet Management with 6 discovered nodes" caption="Fleet Management &mdash; 6 nodes discovered via mDNS" />
         </div>
       </div>
     </div>
