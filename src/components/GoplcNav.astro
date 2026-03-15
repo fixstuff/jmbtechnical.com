@@ -1,0 +1,35 @@
+---
+const goplcNav = [
+  { label: 'Overview', href: '/goplc' },
+  { label: 'Features', href: '/goplc/features' },
+  { label: 'Pricing', href: '/goplc/pricing' },
+];
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/goplc';
+---
+
+<nav class="bg-gray-900 border-b border-gray-700/50 sticky top-16 z-40">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center gap-1 h-12">
+      <a href="/goplc" class="flex items-center gap-2 mr-6">
+        <img src="/images/goplc-logo.svg" alt="GOPLC" class="h-7" />
+      </a>
+      {goplcNav.map((item) => (
+        <a
+          href={item.href}
+          class:list={[
+            'px-3 py-1.5 rounded-md text-sm font-medium transition-colors',
+            (currentPath === item.href || currentPath === item.href + '/')
+              ? 'bg-white/10 text-white'
+              : 'text-gray-400 hover:text-white hover:bg-white/5',
+          ]}
+        >
+          {item.label}
+        </a>
+      ))}
+      <div class="flex-1"></div>
+      <a href="/goplc/pricing" class="hidden sm:inline-flex bg-accent hover:bg-accent-dark text-primary-dark text-sm font-bold px-4 py-1.5 rounded-md transition-colors">
+        Get GOPLC
+      </a>
+    </div>
+  </div>
+</nav>

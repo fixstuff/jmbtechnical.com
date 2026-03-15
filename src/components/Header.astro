@@ -3,6 +3,7 @@ const navItems = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Services', href: '/services' },
+  { label: 'GOPLC', href: '/goplc', highlight: true },
   { label: 'Projects', href: '/projects' },
   { label: 'White Papers', href: '/whitepapers' },
   { label: 'Blog', href: '/blog' },
@@ -33,8 +34,8 @@ const currentPath = Astro.url.pathname;
             class:list={[
               'px-3 py-2 rounded-md text-sm font-medium transition-colors',
               currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href))
-                ? 'bg-primary text-white'
-                : 'text-gray-300 hover:bg-primary-light hover:text-white',
+                ? (item.highlight ? 'bg-accent text-primary-dark' : 'bg-primary text-white')
+                : (item.highlight ? 'text-accent hover:bg-accent/10' : 'text-gray-300 hover:bg-primary-light hover:text-white'),
             ]}
           >
             {item.label}
@@ -62,8 +63,8 @@ const currentPath = Astro.url.pathname;
           class:list={[
             'block px-3 py-2 rounded-md text-base font-medium transition-colors',
             currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href))
-              ? 'bg-primary text-white'
-              : 'text-gray-300 hover:bg-primary-light hover:text-white',
+              ? (item.highlight ? 'bg-accent text-primary-dark' : 'bg-primary text-white')
+              : (item.highlight ? 'text-accent hover:bg-accent/10' : 'text-gray-300 hover:bg-primary-light hover:text-white'),
           ]}
         >
           {item.label}

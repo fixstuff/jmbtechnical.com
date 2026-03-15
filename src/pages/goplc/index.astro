@@ -1,0 +1,527 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import GoplcNav from '../../components/GoplcNav.astro';
+---
+
+<BaseLayout title="GOPLC - AI-Agentic PLC Runtime" description="The world's first AI-agentic PLC runtime. 180,000+ lines of Go, 14 protocol drivers, boss/minion clustering, and native AI integration. One binary. Unlimited scale.">
+  <GoplcNav />
+
+  <!-- Hero -->
+  <section class="relative bg-gray-950 text-white overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(30,58,95,0.4),transparent_70%)]"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36 text-center">
+      <div class="inline-block bg-accent/10 text-accent px-4 py-1.5 rounded-full text-sm font-medium mb-8 border border-accent/20">
+        IEC 61131-3 Compliant &bull; Written in Go &bull; AI-Native
+      </div>
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-8 max-w-4xl mx-auto">
+        The PLC Runtime
+        <br /><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00ADD8] to-[#4ec9b0]">Built for the AI Age</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
+        180,000 lines of Go. 14 protocol drivers. Boss/Minion clustering to 10,000 instances.
+        Native AI that writes your code, builds your HMI, and runs your plant.
+        <strong class="text-white">One binary. Unlimited scale.</strong>
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 mb-16">
+        <a href="/goplc/features" class="bg-accent hover:bg-accent-dark text-primary-dark font-bold px-10 py-4 rounded-lg transition-colors text-lg">
+          Explore Features
+        </a>
+        <a href="/goplc/pricing" class="border border-gray-600 hover:border-accent hover:text-accent px-10 py-4 rounded-lg transition-colors text-lg font-semibold">
+          View Pricing
+        </a>
+      </div>
+
+      <!-- Hero Screenshot -->
+      <div class="max-w-5xl mx-auto">
+        <div class="rounded-xl overflow-hidden shadow-2xl shadow-primary/20 border border-gray-800">
+          <img src="/images/showcase/goplc-web-ide.png" alt="GOPLC Web IDE" class="w-full" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="bg-gray-900 border-y border-gray-800 py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
+        <div>
+          <div class="text-3xl font-extrabold text-[#00ADD8]">180K+</div>
+          <div class="text-sm text-gray-400 mt-1">Lines of Go</div>
+        </div>
+        <div>
+          <div class="text-3xl font-extrabold text-[#4ec9b0]">1,600+</div>
+          <div class="text-sm text-gray-400 mt-1">Built-in Functions</div>
+        </div>
+        <div>
+          <div class="text-3xl font-extrabold text-[#00ADD8]">14+</div>
+          <div class="text-sm text-gray-400 mt-1">Protocol Drivers</div>
+        </div>
+        <div>
+          <div class="text-3xl font-extrabold text-[#4ec9b0]">620K+</div>
+          <div class="text-sm text-gray-400 mt-1">Scans per Second</div>
+        </div>
+        <div>
+          <div class="text-3xl font-extrabold text-accent">~30MB</div>
+          <div class="text-sm text-gray-400 mt-1">Single Binary</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Problem -->
+  <section class="py-24 bg-gray-950 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Industrial Automation is Stuck in the 1990s</h2>
+        <p class="text-lg text-gray-400 leading-relaxed">
+          Traditional PLCs charge tens of thousands of dollars per controller. They lock you into proprietary ecosystems.
+          They can't scale. They can't cluster. And they have zero concept of AI.
+          <strong class="text-white">There's a better way.</strong>
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="bg-gray-900 rounded-xl p-8 border border-gray-800">
+          <div class="text-red-400 font-mono text-2xl font-bold mb-4">$$$$</div>
+          <h3 class="text-lg font-bold mb-2">Vendor Lock-In</h3>
+          <p class="text-gray-400 text-sm">$15K-$50K per controller. Proprietary software at $5K/seat. Annual maintenance contracts. And you still own nothing.</p>
+        </div>
+        <div class="bg-gray-900 rounded-xl p-8 border border-gray-800">
+          <div class="text-red-400 font-mono text-2xl font-bold mb-4">1 core</div>
+          <h3 class="text-lg font-bold mb-2">Can't Scale</h3>
+          <p class="text-gray-400 text-sm">Traditional PLCs run on a single core with fixed I/O. Need more capacity? Buy another controller. Need 100 more? Buy 100 more.</p>
+        </div>
+        <div class="bg-gray-900 rounded-xl p-8 border border-gray-800">
+          <div class="text-red-400 font-mono text-2xl font-bold mb-4">0 AI</div>
+          <h3 class="text-lg font-bold mb-2">No Intelligence</h3>
+          <p class="text-gray-400 text-sm">No AI code generation. No agentic control. No machine learning. No adaptive optimization. Just the same scan cycle since 1985.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Solution - Feature Highlights -->
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <div class="inline-block bg-accent/10 text-accent px-4 py-1.5 rounded-full text-sm font-medium mb-4">
+          A Different Approach
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4">Everything a PLC Should Be</h2>
+        <p class="text-lg text-text-light max-w-2xl mx-auto">
+          GOPLC is an IEC 61131-3 compliant PLC runtime that runs as a single Go binary.
+          Deploy on bare metal, Docker, or Bosch ctrlX CORE.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <a href="/goplc/features#ide" class="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-lg transition-all hover:border-accent/30 block group">
+          <div class="w-12 h-12 bg-gradient-to-br from-[#00ADD8]/10 to-[#4ec9b0]/10 rounded-lg flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-[#00ADD8]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+          </div>
+          <h3 class="text-xl font-bold text-primary-dark mb-3 group-hover:text-accent transition-colors">Web-Based IDE</h3>
+          <p class="text-text-light text-sm">Monaco editor with IEC 61131-3 syntax highlighting, autocomplete, and live error detection. No software to install.</p>
+        </a>
+
+        <a href="/goplc/features#ai" class="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-lg transition-all hover:border-accent/30 block group">
+          <div class="w-12 h-12 bg-gradient-to-br from-[#00ADD8]/10 to-[#4ec9b0]/10 rounded-lg flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-[#4ec9b0]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+          </div>
+          <h3 class="text-xl font-bold text-primary-dark mb-3 group-hover:text-accent transition-colors">AI-Agentic Control</h3>
+          <p class="text-text-light text-sm">Native Claude, OpenAI, and Ollama integration. AI writes your ST code, generates HMI pages, and runs autonomous control loops.</p>
+        </a>
+
+        <a href="/goplc/features#clustering" class="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-lg transition-all hover:border-accent/30 block group">
+          <div class="w-12 h-12 bg-gradient-to-br from-[#00ADD8]/10 to-[#4ec9b0]/10 rounded-lg flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-[#00ADD8]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+          </div>
+          <h3 class="text-xl font-bold text-primary-dark mb-3 group-hover:text-accent transition-colors">Boss/Minion Clustering</h3>
+          <p class="text-text-light text-sm">Scale from 1 to 10,000+ instances. 620,000+ aggregate scans/sec. One $70K server replaces $600K-$15M in traditional PLCs.</p>
+        </a>
+
+        <a href="/goplc/features#protocols" class="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-lg transition-all hover:border-accent/30 block group">
+          <div class="w-12 h-12 bg-gradient-to-br from-[#00ADD8]/10 to-[#4ec9b0]/10 rounded-lg flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-[#4ec9b0]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+          </div>
+          <h3 class="text-xl font-bold text-primary-dark mb-3 group-hover:text-accent transition-colors">14+ Protocol Drivers</h3>
+          <p class="text-text-light text-sm">Modbus, EtherNet/IP, OPC UA, BACnet, DNP3, MQTT, S7, PROFINET, FINS, SNMP, SEL, DF1, Art-Net, and more.</p>
+        </a>
+
+        <a href="/goplc/features#debugger" class="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-lg transition-all hover:border-accent/30 block group">
+          <div class="w-12 h-12 bg-gradient-to-br from-[#00ADD8]/10 to-[#4ec9b0]/10 rounded-lg flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-[#00ADD8]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+          </div>
+          <h3 class="text-xl font-bold text-primary-dark mb-3 group-hover:text-accent transition-colors">Step Debugger</h3>
+          <p class="text-text-light text-sm">Breakpoints, step into/over/out, call stack inspection, and live variable modification. Software-grade debugging in a browser.</p>
+        </a>
+
+        <a href="/goplc/features#fleet" class="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-lg transition-all hover:border-accent/30 block group">
+          <div class="w-12 h-12 bg-gradient-to-br from-[#00ADD8]/10 to-[#4ec9b0]/10 rounded-lg flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-[#4ec9b0]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          </div>
+          <h3 class="text-xl font-bold text-primary-dark mb-3 group-hover:text-accent transition-colors">Fleet Management</h3>
+          <p class="text-text-light text-sm">Centralized monitoring and control across all deployments. Multi-site visibility, health monitoring, and fleet-wide configuration management.</p>
+        </a>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="/goplc/features" class="text-primary font-semibold hover:text-accent transition-colors text-lg">
+          Deep Dive into All Features &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- See It in Action -->
+  <section class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4">See It in Action</h2>
+        <p class="text-lg text-text-light max-w-2xl mx-auto">
+          A real IDE, a real debugger, real AI &mdash; all running in your browser
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- IDE Screenshot -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-shadow">
+          <div class="overflow-hidden">
+            <img src="/images/showcase/goplc-web-ide.png" alt="GOPLC Web IDE" class="w-full" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-primary-dark mb-2">Web-Based IDE</h3>
+            <p class="text-text-light text-sm">Monaco editor with full IEC 61131-3 support. No software to install &mdash; open a browser and start programming.</p>
+          </div>
+        </div>
+
+        <!-- Live Monitoring Screenshot -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-shadow">
+          <div class="overflow-hidden">
+            <img src="/images/showcase/goplc-monitor-variables.png" alt="GOPLC Live Variable Monitoring" class="w-full" />
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-primary-dark mb-2">Live Variable Monitoring</h3>
+            <p class="text-text-light text-sm">Real-time inline values via WebSocket. Color-coded types, expandable arrays, multiple simultaneous users.</p>
+          </div>
+        </div>
+
+        <!-- AI Code Gen Panel -->
+        <div class="bg-gray-900 rounded-xl overflow-hidden shadow-sm border border-gray-800 hover:shadow-lg transition-shadow">
+          <div class="p-6 border-b border-gray-800">
+            <div class="flex items-center gap-2 mb-4">
+              <div class="w-3 h-3 rounded-full bg-red-500"></div>
+              <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+              <div class="w-3 h-3 rounded-full bg-green-500"></div>
+              <span class="text-gray-500 text-xs ml-2">AI Assistant</span>
+            </div>
+            <div class="bg-gray-800 rounded-lg p-4 mb-4">
+              <p class="text-gray-400 text-sm italic">"Write a PID loop that reads analog input 0, maintains 75 degrees, and triggers an alarm above 95"</p>
+            </div>
+            <div class="text-green-400 font-mono text-sm leading-relaxed">
+              <pre class="overflow-x-auto"><code>PROGRAM Main
+VAR
+  sensor : REAL;
+  output : REAL;
+  alarm  : BOOL;
+END_VAR
+
+sensor := ReadAnalog(0);
+output := PID(
+  pv := sensor,
+  sp := 75.0,
+  kp := 1.2
+);
+WriteAnalog(0, output);
+alarm := sensor > 95.0;</code></pre>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-white mb-2">AI Code Generation</h3>
+            <p class="text-gray-400 text-sm">Describe what you want in plain English. AI generates working ST code using all 1,600+ built-in functions.</p>
+          </div>
+        </div>
+
+        <!-- Clustering Architecture Panel -->
+        <div class="bg-gray-900 rounded-xl overflow-hidden shadow-sm border border-gray-800 hover:shadow-lg transition-shadow">
+          <div class="p-6 border-b border-gray-800">
+            <div class="text-center py-4">
+              <div class="inline-block bg-accent/20 text-accent text-xs font-bold px-3 py-1 rounded-full mb-6">BOSS</div>
+              <div class="flex justify-center gap-1 mb-2">
+                <div class="w-px h-8 bg-gray-700"></div>
+              </div>
+              <div class="flex justify-center gap-3 flex-wrap">
+                {Array.from({length: 8}).map(() => (
+                  <div class="bg-[#00ADD8]/10 border border-[#00ADD8]/30 text-[#00ADD8] text-xs font-mono px-2 py-1 rounded">
+                    minion
+                  </div>
+                ))}
+              </div>
+              <div class="mt-6 flex justify-center gap-8 text-center">
+                <div>
+                  <div class="text-2xl font-extrabold text-accent">10,000+</div>
+                  <div class="text-gray-500 text-xs">instances</div>
+                </div>
+                <div>
+                  <div class="text-2xl font-extrabold text-[#00ADD8]">620K</div>
+                  <div class="text-gray-500 text-xs">scans/sec</div>
+                </div>
+                <div>
+                  <div class="text-2xl font-extrabold text-[#4ec9b0]">1.7&micro;s</div>
+                  <div class="text-gray-500 text-xs">latency</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-white mb-2">Boss/Minion Clustering</h3>
+            <p class="text-gray-400 text-sm">Scale from one PLC to thousands. Linear performance scaling at 95%+ efficiency to 500 nodes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4">How GOPLC Compares</h2>
+        <p class="text-lg text-text-light max-w-2xl mx-auto">
+          Modern architecture vs. legacy industrial control
+        </p>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100">
+          <thead>
+            <tr class="bg-primary-dark text-white">
+              <th class="px-6 py-4 text-sm font-semibold">Capability</th>
+              <th class="px-6 py-4 text-sm font-semibold text-center">GOPLC</th>
+              <th class="px-6 py-4 text-sm font-semibold text-center">Allen-Bradley</th>
+              <th class="px-6 py-4 text-sm font-semibold text-center">Siemens</th>
+              <th class="px-6 py-4 text-sm font-semibold text-center">Beckhoff</th>
+            </tr>
+          </thead>
+          <tbody class="text-sm">
+            <tr class="border-b border-gray-100">
+              <td class="px-6 py-4 font-medium">Min. Scan Time</td>
+              <td class="px-6 py-4 text-center font-bold text-[#00ADD8]">20-50 &micro;s</td>
+              <td class="px-6 py-4 text-center text-gray-500">500 &micro;s</td>
+              <td class="px-6 py-4 text-center text-gray-500">250 &micro;s</td>
+              <td class="px-6 py-4 text-center text-gray-500">50 &micro;s</td>
+            </tr>
+            <tr class="border-b border-gray-100 bg-gray-50">
+              <td class="px-6 py-4 font-medium">CPU Cores</td>
+              <td class="px-6 py-4 text-center font-bold text-[#00ADD8]">Unlimited (clustered)</td>
+              <td class="px-6 py-4 text-center text-gray-500">1</td>
+              <td class="px-6 py-4 text-center text-gray-500">1-2</td>
+              <td class="px-6 py-4 text-center text-gray-500">4-8</td>
+            </tr>
+            <tr class="border-b border-gray-100">
+              <td class="px-6 py-4 font-medium">Aggregate Scans/sec</td>
+              <td class="px-6 py-4 text-center font-bold text-[#00ADD8]">620,000+</td>
+              <td class="px-6 py-4 text-center text-gray-500">~2,000</td>
+              <td class="px-6 py-4 text-center text-gray-500">~4,000</td>
+              <td class="px-6 py-4 text-center text-gray-500">~20,000</td>
+            </tr>
+            <tr class="border-b border-gray-100 bg-gray-50">
+              <td class="px-6 py-4 font-medium">AI Integration</td>
+              <td class="px-6 py-4 text-center"><span class="text-[#4ec9b0] font-bold">Native &mdash; 3 providers, 12 tools</span></td>
+              <td class="px-6 py-4 text-center text-gray-400">None</td>
+              <td class="px-6 py-4 text-center text-gray-400">None</td>
+              <td class="px-6 py-4 text-center text-gray-400">None</td>
+            </tr>
+            <tr class="border-b border-gray-100">
+              <td class="px-6 py-4 font-medium">Clustering</td>
+              <td class="px-6 py-4 text-center"><span class="text-[#4ec9b0] font-bold">10,000+ instances</span></td>
+              <td class="px-6 py-4 text-center text-gray-400">None</td>
+              <td class="px-6 py-4 text-center text-gray-400">None</td>
+              <td class="px-6 py-4 text-center text-gray-400">None</td>
+            </tr>
+            <tr class="border-b border-gray-100 bg-gray-50">
+              <td class="px-6 py-4 font-medium">Web IDE</td>
+              <td class="px-6 py-4 text-center"><span class="text-[#4ec9b0] font-bold">Built-in (Monaco)</span></td>
+              <td class="px-6 py-4 text-center text-gray-500">Studio 5000 (~$5K)</td>
+              <td class="px-6 py-4 text-center text-gray-500">TIA Portal (~$4K)</td>
+              <td class="px-6 py-4 text-center text-gray-500">TwinCAT (Free)</td>
+            </tr>
+            <tr class="border-b border-gray-100">
+              <td class="px-6 py-4 font-medium">Protocol Drivers</td>
+              <td class="px-6 py-4 text-center font-bold text-[#00ADD8]">14+ native</td>
+              <td class="px-6 py-4 text-center text-gray-500">EtherNet/IP only</td>
+              <td class="px-6 py-4 text-center text-gray-500">PROFINET + add-ons</td>
+              <td class="px-6 py-4 text-center text-gray-500">EtherCAT + add-ons</td>
+            </tr>
+            <tr class="border-b border-gray-100 bg-gray-50">
+              <td class="px-6 py-4 font-medium">Built-in Functions</td>
+              <td class="px-6 py-4 text-center font-bold text-[#00ADD8]">1,600+</td>
+              <td class="px-6 py-4 text-center text-gray-500">~200</td>
+              <td class="px-6 py-4 text-center text-gray-500">~300</td>
+              <td class="px-6 py-4 text-center text-gray-500">~400</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-medium">Deployment</td>
+              <td class="px-6 py-4 text-center"><span class="text-[#4ec9b0] font-bold">Docker, Snap, Bare Metal</span></td>
+              <td class="px-6 py-4 text-center text-gray-500">Proprietary hardware</td>
+              <td class="px-6 py-4 text-center text-gray-500">Proprietary hardware</td>
+              <td class="px-6 py-4 text-center text-gray-500">Windows IPC</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases -->
+  <section class="py-24 bg-primary-dark text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Built for Real-World Industrial Applications</h2>
+        <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+          From protocol gateways to enterprise-scale distributed control
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white/5 rounded-xl p-8 border border-white/10 hover:border-accent/30 transition-colors">
+          <h3 class="text-lg font-bold mb-3 text-accent">Protocol Gateway</h3>
+          <p class="text-gray-400 text-sm">Bridge Modbus, BACnet, DNP3, OPC UA, and MQTT in a single runtime. Replace racks of protocol converters with one GOPLC instance.</p>
+        </div>
+        <div class="bg-white/5 rounded-xl p-8 border border-white/10 hover:border-accent/30 transition-colors">
+          <h3 class="text-lg font-bold mb-3 text-accent">Edge Controller</h3>
+          <p class="text-gray-400 text-sm">Run on ARM64 edge devices or Bosch ctrlX CORE. Full PLC capability at the edge with cloud connectivity via MQTT and OPC UA.</p>
+        </div>
+        <div class="bg-white/5 rounded-xl p-8 border border-white/10 hover:border-accent/30 transition-colors">
+          <h3 class="text-lg font-bold mb-3 text-accent">Data Center BMS</h3>
+          <p class="text-gray-400 text-sm">Three-tier architecture for data center monitoring and control. 12 native protocols cover every device from UPS to CRAC units.</p>
+        </div>
+        <div class="bg-white/5 rounded-xl p-8 border border-white/10 hover:border-accent/30 transition-colors">
+          <h3 class="text-lg font-bold mb-3 text-accent">Water &amp; Wastewater</h3>
+          <p class="text-gray-400 text-sm">Distributed pump station control with DNP3 store-and-forward for unreliable WAN links. Zero data loss with dual-path redundancy.</p>
+        </div>
+        <div class="bg-white/5 rounded-xl p-8 border border-white/10 hover:border-accent/30 transition-colors">
+          <h3 class="text-lg font-bold mb-3 text-accent">Building Automation</h3>
+          <p class="text-gray-400 text-sm">BACnet/IP and MSTP with COV subscriptions and priority arrays. HVAC, lighting, and energy management in one runtime.</p>
+        </div>
+        <div class="bg-white/5 rounded-xl p-8 border border-white/10 hover:border-accent/30 transition-colors">
+          <h3 class="text-lg font-bold mb-3 text-accent">Test &amp; Simulation</h3>
+          <p class="text-gray-400 text-sm">Spin up hundreds of virtual PLCs for testing. Simulate entire plant floors. Perfect for commissioning, training, and development.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Economics -->
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <div class="inline-block bg-accent/10 text-accent px-4 py-1.5 rounded-full text-sm font-medium mb-4">
+            The Economics
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-6">
+            One Server Replaces<br />a Room Full of PLCs
+          </h2>
+          <p class="text-lg text-text-light mb-8 leading-relaxed">
+            GOPLC's clustering architecture means a single server can run thousands of PLC instances.
+            The math is simple: one $70K server replaces $600K to $15M in traditional programmable controllers.
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <span class="text-red-500 font-bold text-xs">OLD</span>
+              </div>
+              <div>
+                <div class="font-semibold text-primary-dark">Traditional: 300 PLCs</div>
+                <div class="text-sm text-text-light">$600K-$15M hardware + $1.5M in software licenses + 300 matched backup units</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <span class="text-green-600 font-bold text-xs">NEW</span>
+              </div>
+              <div>
+                <div class="font-semibold text-primary-dark">GOPLC: 2 Servers (primary + standby)</div>
+                <div class="text-sm text-text-light">$140K hardware + sub-millisecond failover via DataLayer state sync</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-900 rounded-xl p-10 text-center">
+          <div class="text-6xl font-extrabold text-accent mb-2">97%</div>
+          <div class="text-gray-400 text-lg mb-8">Cost Reduction Potential</div>
+          <div class="space-y-4 text-left text-sm">
+            <div class="flex justify-between text-gray-300">
+              <span>EPYC 9965 (384 cores)</span>
+              <span class="text-accent font-bold">~12,000 minions</span>
+            </div>
+            <div class="border-t border-gray-700"></div>
+            <div class="flex justify-between text-gray-300">
+              <span>Projected throughput</span>
+              <span class="text-accent font-bold">~13M scans/sec</span>
+            </div>
+            <div class="border-t border-gray-700"></div>
+            <div class="flex justify-between text-gray-300">
+              <span>Docker overhead</span>
+              <span class="text-[#4ec9b0] font-bold">ZERO measurable</span>
+            </div>
+            <div class="border-t border-gray-700"></div>
+            <div class="flex justify-between text-gray-300">
+              <span>Scaling efficiency</span>
+              <span class="text-[#4ec9b0] font-bold">95%+ to 500 nodes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Whitepapers -->
+  <section class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4">Backed by Research</h2>
+        <p class="text-lg text-text-light max-w-2xl mx-auto">
+          Published whitepapers with real performance data and architectural deep-dives
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <a href="/whitepapers" class="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-lg transition-all hover:border-accent/30 block">
+          <div class="text-accent text-sm font-semibold mb-2">Whitepaper</div>
+          <h3 class="text-lg font-bold text-primary-dark mb-3">Distributed Real-Time PLC Performance</h3>
+          <p class="text-text-light text-sm">Boss/minion clustering architecture. 10.4x throughput improvement. 620,949 aggregate scans/sec across 31 cores.</p>
+        </a>
+        <a href="/whitepapers" class="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-lg transition-all hover:border-accent/30 block">
+          <div class="text-accent text-sm font-semibold mb-2">Whitepaper</div>
+          <h3 class="text-lg font-bold text-primary-dark mb-3">Universal Protocol Gateway for Data Centers</h3>
+          <p class="text-text-light text-sm">Three-tier data center architecture. 12 native protocols. Dual-path redundancy with zero data loss.</p>
+        </a>
+        <a href="/whitepapers" class="bg-white rounded-xl shadow-sm border border-gray-100 p-8 hover:shadow-lg transition-all hover:border-accent/30 block">
+          <div class="text-accent text-sm font-semibold mb-2">Technical Report</div>
+          <h3 class="text-lg font-bold text-primary-dark mb-3">DC Simulation: Hardware Gateway Architecture</h3>
+          <p class="text-text-light text-sm">11 device simulators, 6 gateway blueprints, 50MW to 1GW scale. ctrlX CORE deployment with cost modeling.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-gradient-to-br from-primary-dark to-gray-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Modernize Your Automation?</h2>
+      <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+        Stop paying tens of thousands per controller. Stop being locked into proprietary ecosystems.
+        Start building with a PLC runtime designed for the future.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/goplc/pricing" class="bg-accent hover:bg-accent-dark text-primary-dark font-bold px-10 py-4 rounded-lg transition-colors text-lg">
+          View Pricing
+        </a>
+        <a href="/contact" class="border border-gray-500 hover:border-accent hover:text-accent px-10 py-4 rounded-lg transition-colors text-lg font-semibold">
+          Contact Sales
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

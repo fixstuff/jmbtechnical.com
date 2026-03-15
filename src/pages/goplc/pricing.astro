@@ -1,0 +1,334 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import GoplcNav from '../../components/GoplcNav.astro';
+---
+
+<BaseLayout title="GOPLC Pricing" description="GOPLC licensing: $500 per seat standard, $400 per seat for volume purchases. Enterprise options available.">
+  <GoplcNav />
+
+  <!-- Header -->
+  <section class="bg-gray-950 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-6">
+        Simple, Transparent Pricing
+      </h1>
+      <p class="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+        One product. No add-on modules. No annual maintenance fees.
+        Every license includes every feature, every protocol driver, and every update.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pricing Cards -->
+  <section class="py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- Standard -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-10 flex flex-col">
+          <div class="mb-8">
+            <h2 class="text-xl font-bold text-primary-dark mb-2">Standard</h2>
+            <p class="text-text-light text-sm">For individual engineers and small teams</p>
+          </div>
+          <div class="mb-8">
+            <div class="flex items-baseline gap-1">
+              <span class="text-5xl font-extrabold text-primary-dark">$500</span>
+              <span class="text-text-light text-lg">/ seat</span>
+            </div>
+            <p class="text-text-light text-sm mt-2">Lifetime license</p>
+          </div>
+          <ul class="space-y-4 mb-10 flex-1">
+            <li class="flex items-start gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Full GOPLC runtime
+            </li>
+            <li class="flex items-start gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              All 14+ protocol drivers
+            </li>
+            <li class="flex items-start gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Web IDE, debugger, HMI builder
+            </li>
+            <li class="flex items-start gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              AI code generation (BYOK)
+            </li>
+            <li class="flex items-start gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Boss/Minion clustering
+            </li>
+            <li class="flex items-start gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Node-RED integration
+            </li>
+            <li class="flex items-start gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Email support
+            </li>
+          </ul>
+          <a href="/contact" class="block text-center bg-primary-dark hover:bg-primary text-white font-bold py-3 rounded-lg transition-colors">
+            Get Started
+          </a>
+        </div>
+
+        <!-- Volume - Featured -->
+        <div class="bg-white rounded-2xl shadow-xl border-2 border-accent p-10 flex flex-col relative">
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+            <span class="bg-accent text-primary-dark text-sm font-bold px-4 py-1.5 rounded-full">Best Value</span>
+          </div>
+          <div class="mb-8">
+            <h2 class="text-xl font-bold text-primary-dark mb-2">Volume</h2>
+            <p class="text-text-light text-sm">For teams purchasing 5 or more seats</p>
+          </div>
+          <div class="mb-8">
+            <div class="flex items-baseline gap-1">
+              <span class="text-5xl font-extrabold text-primary-dark">$400</span>
+              <span class="text-text-light text-lg">/ seat</span>
+            </div>
+            <p class="text-text-light text-sm mt-2">Lifetime license &bull; Minimum 5 seats</p>
+          </div>
+          <ul class="space-y-4 mb-10 flex-1">
+            <li class="flex items-start gap-3 text-sm text-text font-medium">
+              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Everything in Standard
+            </li>
+            <li class="flex items-start gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              20% volume discount
+            </li>
+            <li class="flex items-start gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Priority email support
+            </li>
+            <li class="flex items-start gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Centralized license management
+            </li>
+          </ul>
+          <a href="/contact" class="block text-center bg-accent hover:bg-accent-dark text-primary-dark font-bold py-3 rounded-lg transition-colors">
+            Contact for Volume Pricing
+          </a>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="bg-primary-dark rounded-2xl shadow-sm border border-gray-700 p-10 flex flex-col text-white">
+          <div class="mb-8">
+            <h2 class="text-xl font-bold mb-2">Enterprise</h2>
+            <p class="text-gray-400 text-sm">For large-scale deployments and OEMs</p>
+          </div>
+          <div class="mb-8">
+            <div class="text-5xl font-extrabold">Custom</div>
+            <p class="text-gray-400 text-sm mt-2">Tailored to your deployment</p>
+          </div>
+          <ul class="space-y-4 mb-10 flex-1">
+            <li class="flex items-start gap-3 text-sm text-gray-300 font-medium">
+              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Everything in Volume
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-300">
+              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              OEM / embedding licensing
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-300">
+              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Custom protocol driver development
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-300">
+              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Dedicated support channel
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-300">
+              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Architecture consulting
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-300">
+              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Site license options
+            </li>
+          </ul>
+          <a href="/contact" class="block text-center border border-accent text-accent hover:bg-accent hover:text-primary-dark font-bold py-3 rounded-lg transition-colors">
+            Contact Sales
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4">Every License Includes Everything</h2>
+        <p class="text-lg text-text-light max-w-2xl mx-auto">
+          No feature gating. No add-on modules. No protocol driver upsells. You get the full product.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-white rounded-xl border border-gray-100 p-6 text-center">
+          <div class="text-2xl font-extrabold text-[#00ADD8] mb-2">14+</div>
+          <div class="text-sm font-medium text-primary-dark">Protocol Drivers</div>
+          <div class="text-xs text-text-light mt-1">All included</div>
+        </div>
+        <div class="bg-white rounded-xl border border-gray-100 p-6 text-center">
+          <div class="text-2xl font-extrabold text-[#4ec9b0] mb-2">1,600+</div>
+          <div class="text-sm font-medium text-primary-dark">Built-in Functions</div>
+          <div class="text-xs text-text-light mt-1">All included</div>
+        </div>
+        <div class="bg-white rounded-xl border border-gray-100 p-6 text-center">
+          <div class="text-2xl font-extrabold text-[#00ADD8] mb-2">Web IDE</div>
+          <div class="text-sm font-medium text-primary-dark">Full IDE + Debugger</div>
+          <div class="text-xs text-text-light mt-1">Included</div>
+        </div>
+        <div class="bg-white rounded-xl border border-gray-100 p-6 text-center">
+          <div class="text-2xl font-extrabold text-[#4ec9b0] mb-2">AI</div>
+          <div class="text-sm font-medium text-primary-dark">Agentic Control</div>
+          <div class="text-xs text-text-light mt-1">Included</div>
+        </div>
+        <div class="bg-white rounded-xl border border-gray-100 p-6 text-center">
+          <div class="text-2xl font-extrabold text-accent mb-2">Clustering</div>
+          <div class="text-sm font-medium text-primary-dark">Boss/Minion</div>
+          <div class="text-xs text-text-light mt-1">Included</div>
+        </div>
+        <div class="bg-white rounded-xl border border-gray-100 p-6 text-center">
+          <div class="text-2xl font-extrabold text-accent mb-2">Node-RED</div>
+          <div class="text-sm font-medium text-primary-dark">Integration</div>
+          <div class="text-xs text-text-light mt-1">Included</div>
+        </div>
+        <div class="bg-white rounded-xl border border-gray-100 p-6 text-center">
+          <div class="text-2xl font-extrabold text-accent mb-2">HMI</div>
+          <div class="text-sm font-medium text-primary-dark">Builder</div>
+          <div class="text-xs text-text-light mt-1">Included</div>
+        </div>
+        <div class="bg-white rounded-xl border border-gray-100 p-6 text-center">
+          <div class="text-2xl font-extrabold text-accent mb-2">Updates</div>
+          <div class="text-sm font-medium text-primary-dark">Lifetime</div>
+          <div class="text-xs text-text-light mt-1">Included</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compare to Traditional -->
+  <section class="py-24">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4">Compare the Total Cost</h2>
+        <p class="text-lg text-text-light max-w-2xl mx-auto">
+          Traditional PLC platforms charge separately for hardware, software, add-ons, and annual maintenance
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-red-50 rounded-xl border border-red-200 p-8">
+          <h3 class="text-xl font-bold text-red-700 mb-6">Traditional PLC Platform</h3>
+          <div class="space-y-4 text-sm">
+            <div class="flex justify-between">
+              <span class="text-red-800">ControlLogix L85 Controller</span>
+              <span class="text-red-700 font-bold">$15,000</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-red-800">Studio 5000 Professional</span>
+              <span class="text-red-700 font-bold">$5,200</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-red-800">FactoryTalk View SE</span>
+              <span class="text-red-700 font-bold">$4,500</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-red-800">Annual maintenance (per year)</span>
+              <span class="text-red-700 font-bold">$2,000+</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-red-800">Additional protocol modules</span>
+              <span class="text-red-700 font-bold">$1,000+</span>
+            </div>
+            <div class="border-t border-red-300 pt-4 flex justify-between font-bold text-red-900">
+              <span>Year 1 Total</span>
+              <span>$27,700+</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-green-50 rounded-xl border border-green-200 p-8">
+          <h3 class="text-xl font-bold text-green-700 mb-6">GOPLC</h3>
+          <div class="space-y-4 text-sm">
+            <div class="flex justify-between">
+              <span class="text-green-800">GOPLC License</span>
+              <span class="text-green-700 font-bold">$500</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-green-800">Web IDE &amp; Debugger</span>
+              <span class="text-green-700 font-bold">Included</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-green-800">HMI Builder</span>
+              <span class="text-green-700 font-bold">Included</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-green-800">Annual maintenance</span>
+              <span class="text-green-700 font-bold">$0</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-green-800">All 14+ protocol drivers</span>
+              <span class="text-green-700 font-bold">Included</span>
+            </div>
+            <div class="border-t border-green-300 pt-4 flex justify-between font-bold text-green-900">
+              <span>Lifetime Total</span>
+              <span>$500</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-24 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-primary-dark mb-12 text-center">Frequently Asked Questions</h2>
+
+      <div class="space-y-8">
+        <div>
+          <h3 class="text-lg font-bold text-primary-dark mb-2">What does "per seat" mean?</h3>
+          <p class="text-text-light">One seat = one licensed GOPLC runtime instance. If you run 3 PLC instances (e.g., one boss + two minions), you need 3 seats.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-primary-dark mb-2">Is there a free trial?</h3>
+          <p class="text-text-light">Yes. GOPLC runs in a 2-hour demo mode without a license. Full functionality, no restrictions &mdash; it simply requires a restart after 2 hours. This lets you evaluate every feature before purchasing.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-primary-dark mb-2">Do licenses require internet connectivity?</h3>
+          <p class="text-text-light">No. GOPLC uses offline HMAC-based licensing. Once activated, no internet connection is required. This is critical for air-gapped industrial environments.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-primary-dark mb-2">What platforms are supported?</h3>
+          <p class="text-text-light">Linux x86_64 and ARM64. Deploy via Docker container, Ubuntu Core snap package (for Bosch ctrlX CORE), or run directly on bare metal. Single binary, no runtime dependencies.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-primary-dark mb-2">Do I need to bring my own AI API keys?</h3>
+          <p class="text-text-light">Yes. AI features use your own API keys for Claude (Anthropic), OpenAI, or Ollama (free, runs locally). GOPLC doesn't charge for AI usage &mdash; you pay your AI provider directly, or use Ollama for free.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-primary-dark mb-2">Are updates included?</h3>
+          <p class="text-text-light">Yes. Lifetime license includes all future updates &mdash; new protocol drivers, new features, performance improvements. No annual maintenance fees.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-gradient-to-br from-primary-dark to-gray-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Get Started?</h2>
+      <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+        Try GOPLC free with the 2-hour demo mode. No credit card, no sign-up.
+        When you're ready, a lifetime license is just $500.
+      </p>
+      <a href="/contact" class="bg-accent hover:bg-accent-dark text-primary-dark font-bold px-10 py-4 rounded-lg transition-colors text-lg inline-block">
+        Contact Us to Purchase
+      </a>
+    </div>
+  </section>
+</BaseLayout>

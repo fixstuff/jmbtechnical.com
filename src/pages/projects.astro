@@ -9,6 +9,7 @@ const projects = [
     tech: ['Go', 'IEC 61131-3', 'Monaco Editor', 'WebSocket', 'Node-RED', 'Docker'],
     highlights: ['180K+ lines of code', '14 protocol drivers', 'AI agentic control', 'Clustered deployment'],
     github: 'https://github.com/fixstuff/GOPLC-Showcase',
+    link: '/goplc',
     featured: true,
   },
   {
@@ -105,10 +106,15 @@ const projects = [
                 </div>
               )}
 
-              <div class="flex flex-wrap gap-2">
+              <div class="flex flex-wrap items-center gap-2">
                 {project.tech.map((t) => (
                   <span class="bg-gray-100 text-text text-xs px-3 py-1 rounded-full">{t}</span>
                 ))}
+                {project.link && (
+                  <a href={project.link} class="ml-auto text-accent font-semibold text-sm hover:text-accent-dark transition-colors">
+                    Learn More &rarr;
+                  </a>
+                )}
               </div>
             </div>
           </div>

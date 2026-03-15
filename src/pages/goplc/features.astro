@@ -1,0 +1,905 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import GoplcNav from '../../components/GoplcNav.astro';
+---
+
+<BaseLayout title="GOPLC Features" description="Deep dive into GOPLC's capabilities: web IDE, AI code generation, boss/minion clustering, 14+ protocol drivers, step debugger, Node-RED integration, and more.">
+  <GoplcNav />
+
+  <!-- Header -->
+  <section class="bg-gray-950 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <div class="inline-block bg-accent/10 text-accent px-4 py-1.5 rounded-full text-sm font-medium mb-6 border border-accent/20">
+          Features
+        </div>
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-6">
+          Every Feature.<br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00ADD8] to-[#4ec9b0]">Every Detail.</span>
+        </h1>
+        <p class="text-xl text-gray-400 leading-relaxed">
+          GOPLC isn't a proof of concept. It's 180,000+ lines of production-grade Go code with capabilities that don't exist anywhere else in industrial automation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Web IDE -->
+  <section id="ide" class="py-24 scroll-mt-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <div class="inline-block bg-[#00ADD8]/10 text-[#00ADD8] px-3 py-1 rounded-full text-sm font-medium mb-4">
+            Development
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-6">
+            Web-Based IDE with Monaco Editor
+          </h2>
+          <p class="text-text-light mb-6 leading-relaxed">
+            The same editor engine that powers VS Code, running in your browser. Full IEC 61131-3 Structured Text support with syntax highlighting, autocomplete, error detection, code folding, multi-cursor editing, and find-and-replace with regex.
+          </p>
+          <p class="text-text-light mb-8 leading-relaxed">
+            No software to install. No licenses to manage. Open a browser, point it at your PLC, and start programming. Works from a tablet on the plant floor or a laptop in the control room.
+          </p>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              IEC 61131-3 Structured Text syntax highlighting
+            </li>
+            <li class="flex items-center gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Autocomplete for 1,600+ built-in functions
+            </li>
+            <li class="flex items-center gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Multi-user simultaneous access
+            </li>
+            <li class="flex items-center gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Hot reload &mdash; deploy without stopping the runtime
+            </li>
+          </ul>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-xl border border-gray-200">
+          <img src="/images/showcase/goplc-ide-features.png" alt="GOPLC IDE with Monaco editor showing Structured Text code, syntax highlighting, and code navigation features" class="w-full" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Online Mode -->
+  <section id="online" class="py-24 bg-gray-50 scroll-mt-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div class="order-2 md:order-1">
+          <div class="rounded-xl overflow-hidden shadow-xl border border-gray-200">
+            <img src="/images/showcase/goplc-monitor-variables.png" alt="GOPLC live variable monitoring with real-time inline values, color-coded data types, and WebSocket streaming" class="w-full" />
+          </div>
+        </div>
+        <div class="order-1 md:order-2">
+          <div class="inline-block bg-[#4ec9b0]/10 text-[#4ec9b0] px-3 py-1 rounded-full text-sm font-medium mb-4">
+            Monitoring
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-6">
+            Online Mode &mdash; Live Variable Monitoring
+          </h2>
+          <p class="text-text-light mb-6 leading-relaxed">
+            Enter online mode and live values appear inline next to every variable declaration and assignment. Color-coded by data type, with expandable arrays and structures.
+          </p>
+          <p class="text-text-light mb-8 leading-relaxed">
+            Traditional PLCs require expensive vendor software (Studio 5000, TIA Portal) installed on a dedicated workstation. GOPLC streams live values to any browser via WebSocket. Multiple users can monitor simultaneously.
+          </p>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Real-time inline variable values via WebSocket
+            </li>
+            <li class="flex items-center gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Configurable update rate
+            </li>
+            <li class="flex items-center gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Expandable arrays and structured data types
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step Debugger -->
+  <section id="debugger" class="py-24 scroll-mt-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <div class="inline-block bg-[#00ADD8]/10 text-[#00ADD8] px-3 py-1 rounded-full text-sm font-medium mb-4">
+            Debugging
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-6">
+            Statement-Level Step Debugger
+          </h2>
+          <p class="text-text-light mb-6 leading-relaxed">
+            Traditional PLCs offer limited debugging &mdash; maybe online monitoring of variable values. GOPLC brings modern software debugging to industrial control. Set breakpoints on any line. Step through code statement by statement. Inspect and modify variables in real time. View the full call stack.
+          </p>
+          <p class="text-text-light mb-8 leading-relaxed">
+            Ten dedicated API endpoints power the debugger, with multi-task awareness so you can debug across concurrent PLC tasks. All running in a standard web browser.
+          </p>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Breakpoints, step into, step over, step out
+            </li>
+            <li class="flex items-center gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Live variable inspection and modification
+            </li>
+            <li class="flex items-center gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Full call stack visualization
+            </li>
+            <li class="flex items-center gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Multi-task awareness across concurrent programs
+            </li>
+          </ul>
+        </div>
+        <!-- Debugger Visual Panel -->
+        <div class="bg-gray-900 rounded-xl overflow-hidden shadow-xl border border-gray-800">
+          <div class="flex items-center gap-2 px-4 py-3 bg-gray-800 border-b border-gray-700">
+            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+            <span class="text-gray-500 text-xs ml-2">GOPLC Debugger &mdash; Main.st</span>
+          </div>
+          <div class="p-6 font-mono text-sm leading-loose">
+            <div class="flex items-center gap-3 text-gray-500">
+              <span class="w-8 text-right text-xs">12</span>
+              <span class="w-3"></span>
+              <span class="text-purple-400">VAR</span>
+            </div>
+            <div class="flex items-center gap-3 text-gray-500">
+              <span class="w-8 text-right text-xs">13</span>
+              <span class="w-3"></span>
+              <span>  temp : <span class="text-blue-400">REAL</span>;</span>
+              <span class="ml-auto text-[#4ec9b0] text-xs">72.4</span>
+            </div>
+            <div class="flex items-center gap-3 text-gray-500">
+              <span class="w-8 text-right text-xs">14</span>
+              <span class="w-3"></span>
+              <span>  sp   : <span class="text-blue-400">REAL</span> := <span class="text-green-400">75.0</span>;</span>
+              <span class="ml-auto text-[#4ec9b0] text-xs">75.0</span>
+            </div>
+            <div class="flex items-center gap-3 text-gray-500">
+              <span class="w-8 text-right text-xs">15</span>
+              <span class="w-3"></span>
+              <span class="text-purple-400">END_VAR</span>
+            </div>
+            <div class="flex items-center gap-3 text-gray-500">
+              <span class="w-8 text-right text-xs">16</span>
+              <span class="w-3"></span>
+            </div>
+            <div class="flex items-center gap-3 bg-yellow-500/10 -mx-6 px-6 border-l-2 border-yellow-500">
+              <span class="w-8 text-right text-xs text-yellow-500">17</span>
+              <span class="w-3 text-red-500 text-xs font-bold">*</span>
+              <span class="text-white">temp := <span class="text-yellow-300">ReadAnalog</span>(<span class="text-green-400">0</span>);</span>
+              <span class="ml-auto text-yellow-400 text-xs font-bold">BREAKPOINT</span>
+            </div>
+            <div class="flex items-center gap-3 text-gray-500">
+              <span class="w-8 text-right text-xs">18</span>
+              <span class="w-3"></span>
+              <span><span class="text-purple-400">IF</span> temp > sp <span class="text-purple-400">THEN</span></span>
+            </div>
+            <div class="flex items-center gap-3 text-gray-500">
+              <span class="w-8 text-right text-xs">19</span>
+              <span class="w-3"></span>
+              <span>  alarm := <span class="text-blue-400">TRUE</span>;</span>
+            </div>
+            <div class="flex items-center gap-3 text-gray-500">
+              <span class="w-8 text-right text-xs">20</span>
+              <span class="w-3"></span>
+              <span class="text-purple-400">END_IF</span>;</span>
+            </div>
+          </div>
+          <div class="px-6 py-4 bg-gray-800 border-t border-gray-700 flex items-center gap-3">
+            <button class="bg-[#00ADD8] text-white text-xs font-bold px-3 py-1.5 rounded">Step Over</button>
+            <button class="bg-gray-700 text-gray-300 text-xs font-bold px-3 py-1.5 rounded">Step Into</button>
+            <button class="bg-gray-700 text-gray-300 text-xs font-bold px-3 py-1.5 rounded">Step Out</button>
+            <button class="bg-green-600 text-white text-xs font-bold px-3 py-1.5 rounded ml-auto">Continue</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Code Generation -->
+  <section id="ai" class="py-24 bg-gray-50 scroll-mt-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <!-- AI Visual Panel -->
+        <div class="order-2 md:order-1">
+          <div class="bg-gray-900 rounded-xl overflow-hidden shadow-xl border border-gray-800">
+            <div class="flex items-center gap-2 px-4 py-3 bg-gray-800 border-b border-gray-700">
+              <div class="w-3 h-3 rounded-full bg-red-500"></div>
+              <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+              <div class="w-3 h-3 rounded-full bg-green-500"></div>
+              <span class="text-gray-500 text-xs ml-2">AI Assistant</span>
+            </div>
+            <div class="p-6">
+              <!-- User prompt -->
+              <div class="bg-gray-800 rounded-lg p-4 mb-6">
+                <div class="text-gray-500 text-xs mb-2">You</div>
+                <p class="text-gray-300 text-sm">"Write a PID loop that reads analog input 0, maintains 75 degrees, and triggers an alarm above 95"</p>
+              </div>
+              <!-- AI response -->
+              <div class="mb-4">
+                <div class="text-[#4ec9b0] text-xs mb-2">GOPLC AI &mdash; Claude</div>
+                <div class="text-green-400 font-mono text-sm leading-relaxed">
+                  <pre class="overflow-x-auto"><code>PROGRAM TempControl
+VAR
+  sensor : REAL;
+  output : REAL;
+  alarm  : BOOL;
+  pid    : PID_CONTROLLER;
+END_VAR
+
+sensor := ReadAnalog(0);
+output := PID(
+  pv := sensor,
+  sp := 75.0,
+  kp := 1.2,
+  ki := 0.05,
+  kd := 0.3
+);
+WriteAnalog(0, output);
+alarm := sensor > 95.0;</code></pre>
+                </div>
+              </div>
+              <!-- Status bar -->
+              <div class="flex items-center gap-4 text-xs text-gray-500 pt-4 border-t border-gray-800">
+                <span class="text-green-400 flex items-center gap-1">
+                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+                  Compiled successfully
+                </span>
+                <span>6 functions used</span>
+                <span>All functions valid</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="order-1 md:order-2">
+          <div class="inline-block bg-[#4ec9b0]/10 text-[#4ec9b0] px-3 py-1 rounded-full text-sm font-medium mb-4">
+            Artificial Intelligence
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-6">
+            AI-Powered Code Generation &amp; Agentic Control
+          </h2>
+          <p class="text-text-light mb-6 leading-relaxed">
+            Describe what you want in plain English. GOPLC's AI generates working Structured Text code using the full registry of 1,600+ built-in functions &mdash; not generic code that references functions that don't exist, but code that actually compiles and runs.
+          </p>
+          <p class="text-text-light mb-8 leading-relaxed">
+            Beyond code generation, GOPLC features an <strong>agentic control loop</strong> where AI operates the PLC directly through 12 built-in tools &mdash; reading sensors, writing setpoints, deploying programs, and managing tasks in autonomous multi-turn conversations.
+          </p>
+          <div class="bg-white rounded-lg border border-gray-200 p-6 mb-6">
+            <h4 class="font-bold text-primary-dark mb-3 text-sm">Supported AI Providers</h4>
+            <div class="grid grid-cols-3 gap-4 text-center text-sm">
+              <div>
+                <div class="font-semibold text-primary-dark">Claude</div>
+                <div class="text-text-light text-xs">Best for complex logic</div>
+              </div>
+              <div>
+                <div class="font-semibold text-primary-dark">OpenAI</div>
+                <div class="text-text-light text-xs">Strong general-purpose</div>
+              </div>
+              <div>
+                <div class="font-semibold text-primary-dark">Ollama</div>
+                <div class="text-text-light text-xs">Local / air-gapped</div>
+              </div>
+            </div>
+          </div>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              AI generates ST code, HMI pages, and Node-RED flows
+            </li>
+            <li class="flex items-center gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              12 built-in AI tools for autonomous operation
+            </li>
+            <li class="flex items-center gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Ollama support for fully air-gapped environments
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Boss/Minion Clustering -->
+  <section id="clustering" class="py-24 scroll-mt-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <div class="inline-block bg-[#00ADD8]/10 text-[#00ADD8] px-3 py-1 rounded-full text-sm font-medium mb-4">
+            Architecture
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-6">
+            Boss/Minion Clustering
+          </h2>
+          <p class="text-text-light mb-6 leading-relaxed">
+            Traditional PLCs are islands. Each one is an isolated controller with no concept of distributed coordination. GOPLC breaks this paradigm with its Boss/Minion architecture &mdash; a central Boss coordinates thousands of Minion instances, each executing control logic independently.
+          </p>
+          <p class="text-text-light mb-8 leading-relaxed">
+            Tested at scale with 10,000+ concurrent PLC instances and 620,000+ aggregate scans per second. Linear scaling to 500 minions at 95%+ efficiency. Nested proxy support for hierarchical deployments across multiple sites.
+          </p>
+
+          <div class="bg-gray-900 rounded-lg p-6 mb-6">
+            <h4 class="font-bold text-white mb-4 text-sm">Benchmark Results (31 cores)</h4>
+            <div class="space-y-3 text-sm">
+              <div class="flex justify-between">
+                <span class="text-gray-400">Throughput improvement</span>
+                <span class="text-accent font-bold">10.4x</span>
+              </div>
+              <div class="border-t border-gray-700"></div>
+              <div class="flex justify-between">
+                <span class="text-gray-400">Aggregate scans/sec</span>
+                <span class="text-[#00ADD8] font-bold">620,949</span>
+              </div>
+              <div class="border-t border-gray-700"></div>
+              <div class="flex justify-between">
+                <span class="text-gray-400">DataLayer latency (avg)</span>
+                <span class="text-[#4ec9b0] font-bold">1.7 &micro;s</span>
+              </div>
+              <div class="border-t border-gray-700"></div>
+              <div class="flex justify-between">
+                <span class="text-gray-400">DataLayer latency (p99)</span>
+                <span class="text-[#4ec9b0] font-bold">8.2 &micro;s</span>
+              </div>
+              <div class="border-t border-gray-700"></div>
+              <div class="flex justify-between">
+                <span class="text-gray-400">Docker container overhead</span>
+                <span class="text-green-400 font-bold">ZERO</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Clustering Architecture Visual -->
+        <div class="bg-gray-900 rounded-xl overflow-hidden shadow-xl border border-gray-800 p-8">
+          <!-- Boss -->
+          <div class="text-center mb-6">
+            <div class="inline-flex items-center gap-2 bg-accent/20 text-accent font-bold px-5 py-2.5 rounded-lg border border-accent/30">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2" /></svg>
+              BOSS
+            </div>
+            <div class="text-gray-500 text-xs mt-2">Coordinator &bull; Web IDE &bull; Fleet Management</div>
+          </div>
+          <!-- Connection lines -->
+          <div class="flex justify-center mb-4">
+            <div class="w-px h-6 bg-gray-700"></div>
+          </div>
+          <div class="flex justify-center mb-4">
+            <div class="h-px w-3/4 bg-gray-700"></div>
+          </div>
+          <!-- Minions Row 1 -->
+          <div class="grid grid-cols-4 gap-2 mb-3">
+            <div class="bg-[#00ADD8]/10 border border-[#00ADD8]/30 rounded-lg p-3 text-center">
+              <div class="text-[#00ADD8] text-xs font-bold">Minion 1</div>
+              <div class="text-gray-500 text-[10px] mt-1">Modbus</div>
+            </div>
+            <div class="bg-[#00ADD8]/10 border border-[#00ADD8]/30 rounded-lg p-3 text-center">
+              <div class="text-[#00ADD8] text-xs font-bold">Minion 2</div>
+              <div class="text-gray-500 text-[10px] mt-1">BACnet</div>
+            </div>
+            <div class="bg-[#4ec9b0]/10 border border-[#4ec9b0]/30 rounded-lg p-3 text-center">
+              <div class="text-[#4ec9b0] text-xs font-bold">Minion 3</div>
+              <div class="text-gray-500 text-[10px] mt-1">OPC UA</div>
+            </div>
+            <div class="bg-[#4ec9b0]/10 border border-[#4ec9b0]/30 rounded-lg p-3 text-center">
+              <div class="text-[#4ec9b0] text-xs font-bold">Minion 4</div>
+              <div class="text-gray-500 text-[10px] mt-1">DNP3</div>
+            </div>
+          </div>
+          <!-- Minions Row 2 -->
+          <div class="grid grid-cols-4 gap-2 mb-6">
+            <div class="bg-[#4ec9b0]/10 border border-[#4ec9b0]/30 rounded-lg p-3 text-center">
+              <div class="text-[#4ec9b0] text-xs font-bold">Minion 5</div>
+              <div class="text-gray-500 text-[10px] mt-1">MQTT</div>
+            </div>
+            <div class="bg-[#00ADD8]/10 border border-[#00ADD8]/30 rounded-lg p-3 text-center">
+              <div class="text-[#00ADD8] text-xs font-bold">Minion 6</div>
+              <div class="text-gray-500 text-[10px] mt-1">S7</div>
+            </div>
+            <div class="bg-[#00ADD8]/10 border border-[#00ADD8]/30 rounded-lg p-3 text-center">
+              <div class="text-[#00ADD8] text-xs font-bold">Minion 7</div>
+              <div class="text-gray-500 text-[10px] mt-1">EIP</div>
+            </div>
+            <div class="bg-gray-800 border border-gray-700 rounded-lg p-3 text-center border-dashed">
+              <div class="text-gray-500 text-xs font-bold">+9,993</div>
+              <div class="text-gray-600 text-[10px] mt-1">more...</div>
+            </div>
+          </div>
+          <!-- Stats -->
+          <div class="grid grid-cols-3 gap-4 text-center pt-6 border-t border-gray-800">
+            <div>
+              <div class="text-2xl font-extrabold text-accent">10K+</div>
+              <div class="text-gray-500 text-xs">instances</div>
+            </div>
+            <div>
+              <div class="text-2xl font-extrabold text-[#00ADD8]">620K</div>
+              <div class="text-gray-500 text-xs">scans/sec</div>
+            </div>
+            <div>
+              <div class="text-2xl font-extrabold text-[#4ec9b0]">95%+</div>
+              <div class="text-gray-500 text-xs">efficiency</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Node-RED Integration -->
+  <section id="nodered" class="py-24 bg-gray-50 scroll-mt-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <!-- Node-RED Visual Panel -->
+        <div class="order-2 md:order-1">
+          <div class="bg-white rounded-xl overflow-hidden shadow-xl border border-gray-200">
+            <!-- Node-RED style flow diagram -->
+            <div class="bg-[#8f0000] px-6 py-3 flex items-center gap-3">
+              <span class="text-white font-bold text-sm">Node-RED</span>
+              <span class="text-red-200 text-xs">Managed by GOPLC</span>
+            </div>
+            <div class="p-8 bg-gray-50">
+              <!-- Flow visualization -->
+              <div class="flex items-center gap-3 mb-4">
+                <div class="bg-[#00ADD8] text-white text-xs font-bold px-4 py-2 rounded">goplc-read</div>
+                <div class="text-gray-400">&rarr;</div>
+                <div class="bg-yellow-500 text-white text-xs font-bold px-4 py-2 rounded">function</div>
+                <div class="text-gray-400">&rarr;</div>
+                <div class="bg-green-600 text-white text-xs font-bold px-4 py-2 rounded">dashboard</div>
+              </div>
+              <div class="flex items-center gap-3 mb-4">
+                <div class="bg-[#4ec9b0] text-white text-xs font-bold px-4 py-2 rounded">goplc-subscribe</div>
+                <div class="text-gray-400">&rarr;</div>
+                <div class="bg-purple-600 text-white text-xs font-bold px-4 py-2 rounded">chart</div>
+                <div class="text-gray-400">&rarr;</div>
+                <div class="bg-green-600 text-white text-xs font-bold px-4 py-2 rounded">dashboard</div>
+              </div>
+              <div class="flex items-center gap-3 mb-6">
+                <div class="bg-blue-600 text-white text-xs font-bold px-4 py-2 rounded">mqtt-in</div>
+                <div class="text-gray-400">&rarr;</div>
+                <div class="bg-yellow-500 text-white text-xs font-bold px-4 py-2 rounded">transform</div>
+                <div class="text-gray-400">&rarr;</div>
+                <div class="bg-[#00ADD8] text-white text-xs font-bold px-4 py-2 rounded">goplc-write</div>
+              </div>
+              <!-- Stats -->
+              <div class="grid grid-cols-3 gap-4 text-center pt-4 border-t border-gray-200">
+                <div>
+                  <div class="text-lg font-bold text-primary-dark">7</div>
+                  <div class="text-text-light text-xs">PLC Nodes</div>
+                </div>
+                <div>
+                  <div class="text-lg font-bold text-primary-dark">2.0</div>
+                  <div class="text-text-light text-xs">Dashboard</div>
+                </div>
+                <div>
+                  <div class="text-lg font-bold text-primary-dark">Auto</div>
+                  <div class="text-text-light text-xs">Install</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="order-1 md:order-2">
+          <div class="inline-block bg-[#4ec9b0]/10 text-[#4ec9b0] px-3 py-1 rounded-full text-sm font-medium mb-4">
+            Integration
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-6">
+            Node-RED Integration with Dashboard 2.0
+          </h2>
+          <p class="text-text-light mb-6 leading-relaxed">
+            GOPLC manages Node-RED as an integrated subprocess &mdash; automatic installation, lifecycle management, reverse proxy, and seven custom PLC nodes for reading and writing variables. Build operator dashboards, data flows, and cloud integrations visually.
+          </p>
+          <p class="text-text-light mb-8 leading-relaxed">
+            AI can even generate complete Node-RED flows from natural language descriptions. Combined with Dashboard 2.0, you get professional operator interfaces without writing any frontend code.
+          </p>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Auto-install and managed lifecycle
+            </li>
+            <li class="flex items-center gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              7 custom PLC nodes for variable read/write
+            </li>
+            <li class="flex items-center gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Dashboard 2.0 for professional operator interfaces
+            </li>
+            <li class="flex items-center gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              AI-generated flows from natural language
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Built-in HMI -->
+  <section id="hmi" class="py-24 scroll-mt-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <div class="inline-block bg-[#00ADD8]/10 text-[#00ADD8] px-3 py-1 rounded-full text-sm font-medium mb-4">
+            Operator Interface
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-6">
+            Built-In HMI &mdash; No Separate Software
+          </h2>
+          <p class="text-text-light mb-6 leading-relaxed">
+            In a traditional setup, you need PLC programming software, separate HMI/SCADA software, and a communication driver to link them. GOPLC eliminates two of those three. The HMI builder is built into the runtime and served over the web.
+          </p>
+          <p class="text-text-light mb-8 leading-relaxed">
+            Build operator displays with the visual HMI builder or let AI generate them. Displays are stored in the .goplc project file alongside your control logic. No additional licenses, no driver configuration, no separate engineering tool.
+          </p>
+          <div class="bg-gray-100 rounded-lg p-6">
+            <h4 class="font-bold text-primary-dark mb-3 text-sm">Perfect For</h4>
+            <div class="grid grid-cols-2 gap-3 text-sm text-text-light">
+              <div class="flex items-center gap-2">
+                <div class="w-1.5 h-1.5 rounded-full bg-accent"></div>
+                Quick commissioning
+              </div>
+              <div class="flex items-center gap-2">
+                <div class="w-1.5 h-1.5 rounded-full bg-accent"></div>
+                Remote monitoring
+              </div>
+              <div class="flex items-center gap-2">
+                <div class="w-1.5 h-1.5 rounded-full bg-accent"></div>
+                Small systems
+              </div>
+              <div class="flex items-center gap-2">
+                <div class="w-1.5 h-1.5 rounded-full bg-accent"></div>
+                Prototyping
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- HMI Visual Panel -->
+        <div class="bg-gray-900 rounded-xl overflow-hidden shadow-xl border border-gray-800">
+          <div class="flex items-center gap-2 px-4 py-3 bg-gray-800 border-b border-gray-700">
+            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+            <span class="text-gray-500 text-xs ml-2">GOPLC HMI &mdash; Plant Overview</span>
+          </div>
+          <div class="p-6">
+            <!-- Simulated HMI display -->
+            <div class="grid grid-cols-3 gap-3 mb-4">
+              <div class="bg-gray-800 rounded-lg p-4 text-center">
+                <div class="text-gray-500 text-xs mb-1">Temperature</div>
+                <div class="text-3xl font-bold text-green-400">72.4</div>
+                <div class="text-gray-600 text-xs">&deg;F</div>
+              </div>
+              <div class="bg-gray-800 rounded-lg p-4 text-center">
+                <div class="text-gray-500 text-xs mb-1">Pressure</div>
+                <div class="text-3xl font-bold text-[#00ADD8]">14.7</div>
+                <div class="text-gray-600 text-xs">PSI</div>
+              </div>
+              <div class="bg-gray-800 rounded-lg p-4 text-center">
+                <div class="text-gray-500 text-xs mb-1">Flow Rate</div>
+                <div class="text-3xl font-bold text-[#4ec9b0]">250</div>
+                <div class="text-gray-600 text-xs">GPM</div>
+              </div>
+            </div>
+            <!-- Status indicators -->
+            <div class="grid grid-cols-2 gap-3 mb-4">
+              <div class="bg-gray-800 rounded-lg p-3 flex items-center gap-3">
+                <div class="w-3 h-3 rounded-full bg-green-500 animate-pulse"></div>
+                <div>
+                  <div class="text-white text-xs font-bold">Pump 1</div>
+                  <div class="text-green-400 text-[10px]">RUNNING</div>
+                </div>
+              </div>
+              <div class="bg-gray-800 rounded-lg p-3 flex items-center gap-3">
+                <div class="w-3 h-3 rounded-full bg-green-500 animate-pulse"></div>
+                <div>
+                  <div class="text-white text-xs font-bold">Pump 2</div>
+                  <div class="text-green-400 text-[10px]">RUNNING</div>
+                </div>
+              </div>
+              <div class="bg-gray-800 rounded-lg p-3 flex items-center gap-3">
+                <div class="w-3 h-3 rounded-full bg-gray-600"></div>
+                <div>
+                  <div class="text-white text-xs font-bold">Pump 3</div>
+                  <div class="text-gray-500 text-[10px]">STANDBY</div>
+                </div>
+              </div>
+              <div class="bg-gray-800 rounded-lg p-3 flex items-center gap-3">
+                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                <div>
+                  <div class="text-white text-xs font-bold">Valve A</div>
+                  <div class="text-green-400 text-[10px]">OPEN 85%</div>
+                </div>
+              </div>
+            </div>
+            <!-- Bar indicator -->
+            <div class="bg-gray-800 rounded-lg p-3">
+              <div class="flex justify-between text-xs mb-1">
+                <span class="text-gray-500">Tank Level</span>
+                <span class="text-accent font-bold">67%</span>
+              </div>
+              <div class="w-full bg-gray-700 rounded-full h-2">
+                <div class="bg-accent h-2 rounded-full" style="width: 67%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Protocol Drivers -->
+  <section id="protocols" class="py-24 bg-primary-dark text-white scroll-mt-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <div class="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium mb-4 border border-accent/20">
+          Connectivity
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">14+ Native Protocol Drivers</h2>
+        <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+          53,000+ lines of protocol code. Every major industrial protocol, built in. No add-on modules, no extra licenses.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div class="bg-white/5 rounded-lg p-5 border border-white/10">
+          <div class="font-bold text-[#00ADD8] mb-1">Modbus TCP/RTU</div>
+          <div class="text-gray-400 text-xs">89,769 req/sec throughput</div>
+        </div>
+        <div class="bg-white/5 rounded-lg p-5 border border-white/10">
+          <div class="font-bold text-[#4ec9b0] mb-1">EtherNet/IP</div>
+          <div class="text-gray-400 text-xs">Explicit &amp; implicit messaging</div>
+        </div>
+        <div class="bg-white/5 rounded-lg p-5 border border-white/10">
+          <div class="font-bold text-[#00ADD8] mb-1">OPC UA</div>
+          <div class="text-gray-400 text-xs">Auto-expose VAR_GLOBAL</div>
+        </div>
+        <div class="bg-white/5 rounded-lg p-5 border border-white/10">
+          <div class="font-bold text-[#4ec9b0] mb-1">BACnet/IP &amp; MSTP</div>
+          <div class="text-gray-400 text-xs">COV, priority arrays</div>
+        </div>
+        <div class="bg-white/5 rounded-lg p-5 border border-white/10">
+          <div class="font-bold text-[#00ADD8] mb-1">DNP3</div>
+          <div class="text-gray-400 text-xs">Store-and-forward, AES-256-GCM</div>
+        </div>
+        <div class="bg-white/5 rounded-lg p-5 border border-white/10">
+          <div class="font-bold text-[#4ec9b0] mb-1">MQTT</div>
+          <div class="text-gray-400 text-xs">Publish/subscribe messaging</div>
+        </div>
+        <div class="bg-white/5 rounded-lg p-5 border border-white/10">
+          <div class="font-bold text-[#00ADD8] mb-1">Siemens S7</div>
+          <div class="text-gray-400 text-xs">S7-300/400/1200/1500</div>
+        </div>
+        <div class="bg-white/5 rounded-lg p-5 border border-white/10">
+          <div class="font-bold text-[#4ec9b0] mb-1">PROFINET</div>
+          <div class="text-gray-400 text-xs">IO Controller/Device</div>
+        </div>
+        <div class="bg-white/5 rounded-lg p-5 border border-white/10">
+          <div class="font-bold text-[#00ADD8] mb-1">Omron FINS</div>
+          <div class="text-gray-400 text-xs">TCP &amp; UDP</div>
+        </div>
+        <div class="bg-white/5 rounded-lg p-5 border border-white/10">
+          <div class="font-bold text-[#4ec9b0] mb-1">SNMP v1/v2c/v3</div>
+          <div class="text-gray-400 text-xs">Network device monitoring</div>
+        </div>
+        <div class="bg-white/5 rounded-lg p-5 border border-white/10">
+          <div class="font-bold text-[#00ADD8] mb-1">SEL</div>
+          <div class="text-gray-400 text-xs">Protective relay comms</div>
+        </div>
+        <div class="bg-white/5 rounded-lg p-5 border border-white/10">
+          <div class="font-bold text-[#4ec9b0] mb-1">DF1</div>
+          <div class="text-gray-400 text-xs">Legacy Allen-Bradley</div>
+        </div>
+        <div class="bg-white/5 rounded-lg p-5 border border-white/10">
+          <div class="font-bold text-[#00ADD8] mb-1">Art-Net / sACN</div>
+          <div class="text-gray-400 text-xs">Lighting &amp; entertainment</div>
+        </div>
+        <div class="bg-white/5 rounded-lg p-5 border border-white/10">
+          <div class="font-bold text-[#4ec9b0] mb-1">MIDI / OSC</div>
+          <div class="text-gray-400 text-xs">Audio &amp; media control</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fleet Management -->
+  <section id="fleet" class="py-24 scroll-mt-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <div class="inline-block bg-accent/10 text-accent px-3 py-1 rounded-full text-sm font-medium mb-4">
+            Management
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-6">
+            Fleet Management
+          </h2>
+          <p class="text-text-light mb-6 leading-relaxed">
+            When you're running hundreds or thousands of GOPLC instances across multiple sites, you need centralized visibility and control. Fleet Management gives you a single pane of glass &mdash; mDNS auto-discovery finds every instance on the network, persistent registry tracks them across restarts, and the snapshot store captures every configuration change automatically.
+          </p>
+          <p class="text-text-light mb-8 leading-relaxed">
+            Push configurations to individual nodes or bulk-deploy across your entire fleet. Drift detection compares project hashes across all healthy nodes to catch configuration divergence. Any GOPLC instance can become a fleet manager &mdash; no special binary, just enable it in config.
+          </p>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              mDNS auto-discovery &amp; persistent node registry
+            </li>
+            <li class="flex items-center gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Snapshot store with SQLite metadata &amp; auto-collection
+            </li>
+            <li class="flex items-center gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Bulk push &amp; atomic deploy (restore + validate + download + start)
+            </li>
+            <li class="flex items-center gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Drift detection across all healthy nodes
+            </li>
+            <li class="flex items-center gap-3 text-sm text-text">
+              <svg class="w-5 h-5 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Template-based config with per-node variable substitution
+            </li>
+          </ul>
+        </div>
+        <!-- Fleet Management Visual -->
+        <div class="bg-gray-900 rounded-xl overflow-hidden shadow-xl border border-gray-800">
+          <div class="flex items-center gap-2 px-4 py-3 bg-gray-800 border-b border-gray-700">
+            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+            <span class="text-gray-500 text-xs ml-2">Fleet Management &mdash; All Sites</span>
+          </div>
+          <div class="p-6">
+            <!-- Site cards -->
+            <div class="space-y-3 mb-6">
+              <div class="bg-gray-800 rounded-lg p-4 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                  <div>
+                    <div class="text-white text-sm font-bold">Dallas Data Center</div>
+                    <div class="text-gray-500 text-xs">24 instances &bull; 3 sites</div>
+                  </div>
+                </div>
+                <div class="text-green-400 text-xs font-bold">ALL HEALTHY</div>
+              </div>
+              <div class="bg-gray-800 rounded-lg p-4 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                  <div>
+                    <div class="text-white text-sm font-bold">Austin WTP</div>
+                    <div class="text-gray-500 text-xs">8 instances &bull; 5 pump stations</div>
+                  </div>
+                </div>
+                <div class="text-green-400 text-xs font-bold">ALL HEALTHY</div>
+              </div>
+              <div class="bg-gray-800 rounded-lg p-4 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-2 h-2 rounded-full bg-yellow-500"></div>
+                  <div>
+                    <div class="text-white text-sm font-bold">Phoenix Manufacturing</div>
+                    <div class="text-gray-500 text-xs">12 instances &bull; 2 lines</div>
+                  </div>
+                </div>
+                <div class="text-yellow-400 text-xs font-bold">1 WARNING</div>
+              </div>
+            </div>
+            <!-- Fleet stats -->
+            <div class="grid grid-cols-3 gap-4 text-center pt-4 border-t border-gray-800">
+              <div>
+                <div class="text-xl font-extrabold text-white">44</div>
+                <div class="text-gray-500 text-xs">Total Instances</div>
+              </div>
+              <div>
+                <div class="text-xl font-extrabold text-green-400">43</div>
+                <div class="text-gray-500 text-xs">Healthy</div>
+              </div>
+              <div>
+                <div class="text-xl font-extrabold text-yellow-400">1</div>
+                <div class="text-gray-500 text-xs">Warning</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Features Grid -->
+  <section id="deployment" class="py-24 bg-gray-50 scroll-mt-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4">And That's Not All</h2>
+        <p class="text-lg text-text-light max-w-2xl mx-auto">
+          Every capability you'd expect from an enterprise PLC platform &mdash; and several you wouldn't
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+          <h3 class="text-lg font-bold text-primary-dark mb-3">Multi-Task Scheduler</h3>
+          <p class="text-text-light text-sm">Run multiple concurrent tasks at different priorities and scan rates. Watchdog timers, hot reload, and per-task reload without stopping the runtime.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+          <h3 class="text-lg font-bold text-primary-dark mb-3">Real-Time Performance</h3>
+          <p class="text-text-light text-sm">Memory locking, CPU affinity, SCHED_FIFO, and GC tuning. 20-50&micro;s scan execution. 5.5x p95 jitter reduction in real-time mode.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+          <h3 class="text-lg font-bold text-primary-dark mb-3">REST API</h3>
+          <p class="text-text-light text-sm">Complete programmatic access to every runtime capability. Programs, tasks, variables, configuration &mdash; all accessible via documented REST endpoints.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+          <h3 class="text-lg font-bold text-primary-dark mb-3">L5X Import/Export</h3>
+          <p class="text-text-light text-sm">Import and export Rockwell L5X project files. Migrate existing Allen-Bradley programs to GOPLC or export back for interoperability.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+          <h3 class="text-lg font-bold text-primary-dark mb-3">Propeller 2 Hardware I/O</h3>
+          <p class="text-text-light text-sm">56 hardware functions &mdash; GPIO, Smart Pins, UART, I2C, SPI, ADC/DAC, PWM, encoders, and OLED display. Auto-discovery, native Go loader, 3Mbaud binary frame protocol.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+          <h3 class="text-lg font-bold text-primary-dark mb-3">Arduino Support</h3>
+          <p class="text-text-light text-sm">19 Arduino functions &mdash; GPIO, analog, I2C, servo, sensors (temperature, ultrasonic), WiFi, BLE, and LED matrix. Same serial frame protocol as P2. Control Arduino from ST code.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+          <h3 class="text-lg font-bold text-primary-dark mb-3">MCP Server</h3>
+          <p class="text-text-light text-sm">32-tool MCP server for AI agent integration. Runtime control, variable access, program management, and system operations &mdash; all accessible from Claude Code, Cursor, or any MCP client.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+          <h3 class="text-lg font-bold text-primary-dark mb-3">Gateway Deployer</h3>
+          <p class="text-text-light text-sm">CSV I/O maps to complete Modbus gateway projects in one command. Auto-generates GVL, Poll, Alarm, and Server programs. Tested with 10,000 tags.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+          <h3 class="text-lg font-bold text-primary-dark mb-3">Protocol Analyzer</h3>
+          <p class="text-text-light text-sm">Built-in protocol analyzer with PCAP export. Capture, inspect, and debug industrial protocol traffic without external tools.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+          <h3 class="text-lg font-bold text-primary-dark mb-3">250+ REST API Endpoints</h3>
+          <p class="text-text-light text-sm">Complete programmatic access to every runtime capability. Programs, tasks, variables, fleet, snapshots, system control &mdash; all documented and accessible.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+          <h3 class="text-lg font-bold text-primary-dark mb-3">Authentication &amp; Licensing</h3>
+          <p class="text-text-light text-sm">Optional JWT authentication with public HMI and protected IDE. Offline HMAC licensing that works without internet connectivity.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+          <h3 class="text-lg font-bold text-primary-dark mb-3">Config Wizard</h3>
+          <p class="text-text-light text-sm">Form-based and AI-assisted configuration. Set up protocol drivers, task scheduling, and deployment options through a guided wizard interface.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+          <h3 class="text-lg font-bold text-primary-dark mb-3">Hardware Manifests</h3>
+          <p class="text-text-light text-sm">YAML hardware descriptors with auto-generated ST initialization code. Define your I/O hardware once, get ready-to-use variable declarations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-gradient-to-br from-primary-dark to-gray-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Get Started?</h2>
+      <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+        See pricing options or get in touch to discuss how GOPLC fits your application.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/goplc/pricing" class="bg-accent hover:bg-accent-dark text-primary-dark font-bold px-10 py-4 rounded-lg transition-colors text-lg">
+          View Pricing
+        </a>
+        <a href="/contact" class="border border-gray-500 hover:border-accent hover:text-accent px-10 py-4 rounded-lg transition-colors text-lg font-semibold">
+          Contact Sales
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
