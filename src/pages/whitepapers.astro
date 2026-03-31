@@ -3,13 +3,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const whitepapers = [
   {
+    title: 'The Optimus Network - Distributed Infrastructure & Vertical Integration',
+    description: 'Independent structural analysis of Tesla\'s humanoid robot economics. Covers the subscriber-funded distributed compute network model, planetary-scale behavioral data asset valuation, defense sector implications, supply chain security risks, and adversarial ML attack vectors. Three-part analysis spanning commercial network economics, data monetization, and the military dimension.',
+    date: 'March 2026',
+    version: '1.0',
+    tags: ['Strategic Analysis', 'Robotics', 'Economics', 'Defense'],
+    pdf: '/whitepapers/optimus_network_analysis.pdf',
+    markdown: '/whitepapers/optimus_network_analysis.md',
+  },
+  {
     title: 'Humanoid Robotics - The Robot Control Problem',
     description: '12-runtime clustered architecture for Optimus-class humanoid robots. Maps industrial PLC scan-cycle scheduling to 52+ DOF servo control with 1ms–100ms scan rate span. Measured 94–99% CPU idle running 7 protocol stacks simultaneously on ARM64. Native AI integration via MCP server bridge. Includes RTOS comparison with measured data.',
     date: 'March 2026',
     version: '1.1',
     tags: ['Robotics', 'Real-Time', 'AI Integration', 'ARM64'],
-    pdf: 'https://github.com/fixstuff/GOPLC-Showcase/raw/main/docs/GoPLC_Humanoid_Robotics_Whitepaper.pdf',
-    markdown: 'https://github.com/fixstuff/GOPLC-Showcase/blob/main/docs/WHITEPAPER_HUMANOID_ROBOTICS.md',
+    pdf: '/whitepapers/GoPLC_Humanoid_Robotics_Whitepaper.pdf',
+    markdown: '/whitepapers/WHITEPAPER_HUMANOID_ROBOTICS.md',
   },
   {
     title: 'Clustering - Distributed Real-Time PLC Performance',
@@ -17,8 +26,8 @@ const whitepapers = [
     date: 'February 2026',
     version: '1.0',
     tags: ['Clustering', 'Real-Time', 'Benchmarks'],
-    pdf: 'https://github.com/fixstuff/GOPLC-Showcase/raw/main/docs/whitepaper-clustering.pdf',
-    markdown: 'https://github.com/fixstuff/GOPLC-Showcase/blob/main/docs/whitepaper-clustering.md',
+    pdf: '/whitepapers/whitepaper-clustering.pdf',
+    markdown: '/whitepapers/whitepaper-clustering.md',
   },
   {
     title: 'Datacenter Gateway - Universal Protocol Gateway',
@@ -26,8 +35,8 @@ const whitepapers = [
     date: 'January 2026',
     version: '1.1',
     tags: ['Data Center', 'Protocol Gateway', 'BMS/EPMS'],
-    pdf: 'https://github.com/fixstuff/GOPLC-Showcase/raw/main/docs/whitepaper-datacenter-gateway.pdf',
-    markdown: 'https://github.com/fixstuff/GOPLC-Showcase/blob/main/docs/whitepaper-datacenter-gateway.md',
+    pdf: '/whitepapers/whitepaper-datacenter-gateway.pdf',
+    markdown: '/whitepapers/whitepaper-datacenter-gateway.md',
   },
   {
     title: 'DC Simulation - Hardware Gateway Architecture',
@@ -35,8 +44,8 @@ const whitepapers = [
     date: 'February 2026',
     version: '1.0',
     tags: ['Data Center', 'Digital Twin', 'Hardware'],
-    pdf: 'https://github.com/fixstuff/GOPLC-Showcase/raw/main/docs/WHITEPAPER_DC_SIMULATION_HARDWARE.pdf',
-    markdown: 'https://github.com/fixstuff/GOPLC-Showcase/blob/main/docs/WHITEPAPER_DC_SIMULATION_HARDWARE.md',
+    pdf: '/whitepapers/WHITEPAPER_DC_SIMULATION_HARDWARE.pdf',
+    markdown: '/whitepapers/WHITEPAPER_DC_SIMULATION_HARDWARE.md',
   },
   {
     title: 'DC Simulation - Virtualized Gateway Architecture',
@@ -44,19 +53,19 @@ const whitepapers = [
     date: 'February 2026',
     version: '1.0',
     tags: ['Data Center', 'Virtualization', 'Cost Reduction'],
-    pdf: 'https://github.com/fixstuff/GOPLC-Showcase/raw/main/docs/WHITEPAPER_DC_SIMULATION_VIRTUAL.pdf',
-    markdown: 'https://github.com/fixstuff/GOPLC-Showcase/blob/main/docs/WHITEPAPER_DC_SIMULATION_VIRTUAL.md',
+    pdf: '/whitepapers/WHITEPAPER_DC_SIMULATION_VIRTUAL.pdf',
+    markdown: '/whitepapers/WHITEPAPER_DC_SIMULATION_VIRTUAL.md',
   },
 ];
 
 const reports = [
   {
     title: 'Water Treatment Plant Simulation - Performance Report',
-    description: 'Monolith vs in-process cluster architecture comparison. 37 programs showing the monolith cannot sustain 100ms scan (averaging 130ms) while the 10-node cluster achieves 13x faster execution with zero watchdog faults.',
+    description: 'Monolith vs in-process cluster architecture comparison. 37 programs originally averaging 130ms on the monolith, since optimized to 22ms scan time through GOPLC engine improvements. The 10-node cluster achieves 13x faster execution with zero watchdog faults.',
     date: 'February 2026',
     tags: ['Performance', 'Water Treatment', 'Benchmarks'],
-    pdf: 'https://github.com/fixstuff/GOPLC-Showcase/raw/main/docs/WTP_Performance_Report.pdf',
-    markdown: 'https://github.com/fixstuff/GOPLC-Showcase/blob/main/docs/WTP_Performance_Report.md',
+    pdf: '/whitepapers/WTP_Performance_Report.pdf',
+    markdown: '/whitepapers/WTP_Performance_Report.md',
   },
 ];
 ---
