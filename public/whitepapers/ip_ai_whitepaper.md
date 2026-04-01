@@ -492,3 +492,54 @@ We are in a pre-framework moment. The technology of conflict has again outrun th
 
 *© 2026 JMB Technical Services LLC. All rights reserved.*  
 *JMB Technical Services LLC — Industrial Automation & Emerging Technology Consulting*
+
+---
+
+## Postscript: As This Paper Went to Press
+
+*April 1, 2026*
+
+This paper was completed on April 1, 2026. Within hours of its finalization, news broke of an event that renders every abstract argument in the preceding thirteen sections concrete, current, and urgent. It is documented here not as an addendum but as a timestamp — proof that the threat model this paper describes is not theoretical. It is operational. It is happening now.
+
+---
+
+> **INCIDENT: Axios npm Supply Chain Compromise**  
+> March 31 – April 1, 2026 | Attributed: UNC1069 (North Korea-nexus) | Google Threat Intelligence Group  
+> Package: axios (npm) | Weekly downloads: ~100 million | Exposure window: 3 hours | Backdoor: WAVESHAPER.V2
+
+---
+
+On March 30, 2026 at 23:59 UTC, a threat actor compromised the npm account of the lead Axios maintainer — one of the most downloaded JavaScript libraries on earth, present in approximately 80% of cloud and code environments — and published two malicious package versions containing a hidden dependency. That dependency executed a cross-platform dropper automatically on every npm install, silently deploying the WAVESHAPER.V2 remote access trojan to Windows, macOS, and Linux systems simultaneously. The dropper contacted a command-and-control server, delivered its payload, and deleted itself — replacing its own configuration file with a clean decoy so that any developer inspecting their installation after the fact would see nothing wrong.
+
+**The entire process from installation to full system compromise took approximately 15 seconds.**
+
+Google's Threat Intelligence Group attributed the attack to UNC1069, a financially motivated North Korea-nexus threat actor active since at least 2018, previously used by Pyongyang to target cryptocurrency and decentralized finance firms. The attribution was based on infrastructure overlaps with prior UNC1069 operations and the use of an updated version of the WAVESHAPER backdoor previously associated with the group.
+
+The malicious versions were detected by automated security tooling and removed within roughly three hours. Three hours. Axios has approximately 100 million weekly downloads. Wiz estimated the malicious versions reached approximately 3% of the environments it scanned during the exposure window — a figure whose absolute scale, across the entire JavaScript ecosystem, represents a compromise event of extraordinary potential reach.
+
+This was not an isolated incident. In the same week, a separate North Korea-linked group designated UNC6780 poisoned GitHub Actions and PyPI packages associated with the Trivy security scanner, the Checkmarx static analysis tool, and the LiteLLM AI library — deploying the SANDCLOCK credential stealer across an entirely different segment of the development infrastructure. Mandiant's CTO Charles Carmakal stated publicly that the secrets stolen across these simultaneous supply chain attacks "will enable more software supply chain attacks, SaaS environment compromises, ransomware and extortion events, and crypto heists over the next several days, weeks, and months."
+
+> **What This Incident Proves:** Section 10.2 of this paper described "supply chain infiltration through AI-generated compromised code" as one of five AI-enabled economic warfare weapon categories, and specifically cited the SolarWinds attack as a preview of what AI-automated versions at scale would look like. The Axios compromise is not a preview. It is the thing itself, executed yesterday, against infrastructure so foundational that 80% of cloud environments contain it. The 15-second compromise window. The self-deleting evidence. The simultaneous multi-vector campaign across npm, PyPI, and GitHub Actions. The North Korean state attribution. Every element of the threat model this paper constructed from first principles manifested in real time within 24 hours of the paper's completion.
+
+Section 11.3 of this paper asked what happens when a small innovative company is driven out of business by AI-assisted economic warfare before its legal remedies can materialize. The Axios incident inverts that question. The victim here is not a company. The victim is the trust infrastructure of global software development itself — the assumption, foundational to the entire open source ecosystem, that a package downloaded from a reputable registry under a trusted maintainer's account contains what it says it contains.
+
+That assumption was false for three hours on March 31, 2026. In those three hours, an unknown number of developer workstations, CI/CD pipelines, cloud build environments, and production systems across every industry that runs JavaScript — which is to say, essentially every industry — received a silent, self-concealing backdoor at the direction of the North Korean state. The downstream consequences, as Mandiant noted, will unfold over months.
+
+Section 12 of this paper argued that we are in a pre-framework moment — that the technology of conflict has outrun the institutional capacity to govern it, and that the window for establishing governance frameworks is measured in years, not decades. The Axios incident compresses that timeline further. The question is not whether these attacks will continue. They will. The question is whether the frameworks — legal, technical, diplomatic, and strategic — will be established before the accumulated damage reaches a scale that forces recognition of what it actually is: warfare, conducted below every threshold that existing law and doctrine was built to recognize, against the foundations of the digital economy that every nation now depends upon for its security and prosperity.
+
+*The paper's ultimate conclusion stands. It is now simply more urgent than it was yesterday.*
+
+### Postscript Sources
+
+- Google Threat Intelligence Group (GTIG), "North Korea-Nexus Threat Actor Compromises Widely Used Axios NPM Package in Supply Chain Attack," Google Cloud Blog, April 1, 2026
+- John Hultquist, Chief Analyst, GTIG — Attribution statement to TechCrunch and Help Net Security, March 31 – April 1, 2026
+- StepSecurity — Detection and technical analysis of the Axios supply chain compromise, March 31, 2026
+- Charles Carmakal, CTO Mandiant (Google Cloud) — Public statement on downstream impact of simultaneous supply chain attacks, April 1, 2026
+- Wiz — Environment scan data: Axios present in approximately 80% of cloud environments; malicious versions observed in approximately 3% of scanned environments during exposure window
+- SOCRadar, "Axios npm Hijack 2026: Everything You Need to Know," April 1, 2026
+- Help Net Security, "Axios npm packages backdoored in supply chain attack," March 31, 2026; "North Korean hackers linked to Axios npm supply chain compromise," April 1, 2026
+
+---
+
+*© 2026 JMB Technical Services LLC. All rights reserved.*  
+*JMB Technical Services LLC — Industrial Automation & Emerging Technology Consulting*
