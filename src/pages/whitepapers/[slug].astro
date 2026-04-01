@@ -4,11 +4,13 @@ import { marked } from 'marked';
 import fs from 'node:fs';
 import path from 'node:path';
 
-const papers: Record<string, { title: string; file: string; pdf: string }> = {
+const papers: Record<string, { title: string; file: string; pdf: string; description?: string; ogImage?: string }> = {
   'ip-ai-whitepaper': {
-    title: 'Functional Equivalence and the Limits of Law',
+    title: 'Functional Equivalence and the Limits of Law: AI, Copyright, and Patent Law',
     file: 'ip_ai_whitepaper.md',
     pdf: '/whitepapers/ip_ai_whitepaper.pdf',
+    description: 'AI has made economic warfare as potentially existential as kinetic warfare. This paper traces the chain from IP law\'s structural collapse to a proposed MAD AI doctrine for national defense.',
+    ogImage: '/images/whitepapers/ip-ai-cover.jpg',
   },
   'optimus-network-analysis': {
     title: 'The Optimus Network - Distributed Infrastructure & Vertical Integration',
@@ -76,7 +78,7 @@ rawContent = rawContent.replace(/^---\n[\s\S]*?\n---\n/, '');
 const htmlContent = await marked.parse(rawContent);
 ---
 
-<BaseLayout title={paper.title} description={`Read the full whitepaper: ${paper.title}`}>
+<BaseLayout title={paper.title} description={paper.description || `Read the full whitepaper: ${paper.title}`} ogImage={paper.ogImage}>
   <article class="whitepaper-article">
     <!-- Top bar -->
     <div class="bg-primary-dark text-white py-4">
