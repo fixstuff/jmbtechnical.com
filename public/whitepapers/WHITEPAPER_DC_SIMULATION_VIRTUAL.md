@@ -12,7 +12,7 @@ geometry: "left=0.55in,right=0.55in,top=0.65in,bottom=0.65in"
 fontsize: 9pt
 ---
 
-# GOPLC Datacenter Infrastructure Simulation
+# GOPLC DC Simulation: Virtualized Gateway Architecture
 # Virtualized Gateway Architecture
 
 **Eliminating Edge Hardware with Server-Based Gateways and Routed VLANs**

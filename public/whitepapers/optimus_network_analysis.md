@@ -20,6 +20,10 @@ March 2026
 > assembled --- and the loss leader for a defense contractor with no
 > historical precedent.***
 
+**A Note On Scope**
+
+While Tesla\'s Optimus program is the most advanced and publicly visible example, this analysis applies to any vertically integrated humanoid robot platform that combines proprietary hardware manufacturing, private satellite communications, captive AI inference, and a single-vendor software update pipeline. The structural risks identified here are architectural, not personal. Tesla is used throughout as the concrete case study because it is the furthest along the deployment curve --- but the conclusions apply equally to any future platform with these properties.
+
 **Executive Summary**
 
 The conventional analysis of Tesla\'s Optimus program focuses on the
@@ -32,7 +36,7 @@ established principle of datacenter economics, cloud computing, and
 defense contracting simultaneously.
 
 The core thesis: Tesla does not need Optimus to be profitable as a
-robot. Optimus is the hardware vessel through which Elon Musk deploys a
+robot. Optimus is the hardware vessel through which the platform operator deploys a
 subscriber-funded distributed compute network, a planetary-scale
 behavioral data collection apparatus, a terrestrial mesh communications
 layer, and ultimately --- the manufacturing foundation for the world\'s
@@ -120,8 +124,8 @@ propositions. Nobody leads with \'you are a node in my private
 distributed datacenter.\' The economics are identical; the framing
 determines adoption velocity.
 
-> ***Amazon pays billions to build and operate datacenters. Musk\'s
-> subscribers pay him to operate his datacenter for him --- in their own
+> ***Amazon pays billions to build and operate datacenters. The platform
+> operator\'s subscribers pay to operate the datacenter for the operator --- in their own
 > homes, on their own power, with their own hands.***
 
 **3. The Cost Structure: What This Actually Costs to Run**
@@ -163,9 +167,9 @@ liability.
 
 **4. The Infrastructure Stack Already Exists**
 
-The most underappreciated aspect of this analysis is that Musk has not
-announced a plan to build a distributed compute network. He has already
-built the physical substrate for one, and is waiting to activate it.
+The most underappreciated aspect of this analysis is that Tesla has not
+announced a plan to build a distributed compute network. The company has already
+built the physical substrate for one, and is positioned to activate it.
 
 -   Powerwalls --- stationary, always-on, grid-connected, already in
     millions of homes worldwide
@@ -188,7 +192,7 @@ simultaneously at four network layers. Their economics improve with each
 additional asset. The subscription becomes progressively more attractive
 the more deeply embedded they are in the ecosystem.
 
-This is not a network he needs to build. It is a network he needs to
+This is not a network Tesla needs to build. It is a network Tesla needs to
 turn on.
 
 **5. The Compute Resale Layer**
@@ -428,7 +432,7 @@ the civilian and military programs:
     xAI and Starlink
 
 Historically, DARPA funded research that trickled down to commercial
-products --- the internet, GPS, touchscreens. Musk inverts this:
+products --- the internet, GPS, touchscreens. Tesla\'s model inverts this:
 civilian scale funds military capability improvement, creating a faster
 development cycle than any defense contractor operating in the
 traditional procurement model can match.
@@ -478,19 +482,19 @@ If a single private entity owns the manufacturing capability, the
 software stack, the communications layer (Starlink), and the AI
 inference layer (xAI) for the world\'s largest robot military --- the
 government is not purchasing defense capability. It is renting it from
-an individual who controls the off switch.
+a single entity that controls the off switch.
 
--   Every Optimus military unit runs his operating system
+-   Every Optimus military unit runs the platform operator\'s operating system
 
--   Every unit connects through his satellite network
+-   Every unit connects through the operator\'s satellite network
 
--   Every unit runs inference on his AI models
+-   Every unit runs inference on the operator\'s AI models
 
--   Every unit receives software updates from his servers
+-   Every unit receives software updates from the operator\'s servers
 
 A foreign adversary seeking to neutralize this capability does not need
-to defeat the robots in the field. They need to compromise one man, one
-company, or one satellite constellation.
+to defeat the robots in the field. They need to compromise one company,
+one executive, or one satellite constellation.
 
 > ***This is not a defense contractor relationship. This is the
 > privatization of national military capability in a form that has no
@@ -571,8 +575,8 @@ integrated system in which:
 
 -   BOM reduction drives lower hardware cost --- completing the loop
 
-> ***Amazon has AWS. Google has TPUs. Microsoft has Azure. Musk would
-> have a physical network that cannot be datacenter-competed because it
+> ***Amazon has AWS. Google has TPUs. Microsoft has Azure. The platform
+> operator would have a physical network that cannot be datacenter-competed because it
 > is already in your house, your driveway, and your garage --- and it is
 > expanding by however many units ship this quarter.***
 
@@ -748,26 +752,25 @@ The Optimus architecture breaks this assumption completely.
 -   The software running on every unit is signed by Tesla\'s certificate
     authority
 
--   The update pipeline runs through servers under Musk\'s operational
-    control
+-   The update pipeline runs through servers under the platform operator\'s
+    operational control
 
--   The primary communications uplink runs through Starlink --- his
-    satellite network
+-   The primary communications uplink runs through Starlink --- the same
+    entity\'s satellite network
 
--   The AI inference layer runs on xAI infrastructure --- his models,
-    his servers
+-   The AI inference layer runs on xAI infrastructure --- the same
+    entity\'s models and servers
 
--   The behavioral permission system is defined in his software stack
+-   The behavioral permission system is defined in the operator\'s software stack
 
 This is not hypothetical. The precedent has already been established ---
 not with robots, but with the communications infrastructure that
 preceded them.
 
-In September 2023, Musk restricted Starlink coverage near Crimea,
-preventing a Ukrainian drone strike on Russian naval vessels. He later
-confirmed he had received a request to activate Starlink coverage to
-Sevastopol, describing the obvious intent as sinking most of the Russian
-fleet at anchor, and declined on the grounds that SpaceX would otherwise
+In September 2023, SpaceX restricted Starlink coverage near Crimea,
+preventing a Ukrainian drone strike on Russian naval vessels. The company
+confirmed it had received a request to activate Starlink coverage to
+Sevastopol, and declined on the grounds that SpaceX would otherwise
 be explicitly complicit in a major act of war. In February 2026,
 Starlink access in Ukraine was restricted to registered users, largely
 cutting off Russian forces who had been obtaining terminals through
@@ -775,9 +778,9 @@ black market supply chains --- an action that according to Russian
 officials stopped planned strikes and created a frontline coordination
 crisis.
 
-A private individual made battlefield decisions that affected the
+A private company made battlefield decisions that affected the
 outcome of military operations in an active war. Twice. Journalist Ronan
-Farrow noted at the time: there was little precedent for a civilian
+Farrow noted at the time: there was little precedent for a private entity
 becoming the arbiter of a war between nations.
 
 That was a communications network. The Optimus network puts physical
@@ -786,8 +789,8 @@ what changes.
 
 A presidential DPA order directing Tesla to push a military activation
 update to deployed units runs directly into the question of whether the
-CEO of Tesla is legally and practically compelled to execute that order
---- or whether he can delay, modify, selectively apply, or technically
+platform operator is legally and practically compelled to execute that order
+--- or whether they can delay, modify, selectively apply, or technically
 obstruct it while appearing to comply.
 
 This is not a hypothetical about bad faith. It is a structural
@@ -798,8 +801,8 @@ scale in any prior mobilization scenario.
 
 > ***The constitutional crisis is not that the government might
 > conscript the robots. It is that the government\'s ability to
-> conscript the robots depends entirely on the cooperation of one man
-> --- and no legal framework currently defines what happens when that
+> conscript the robots depends entirely on the cooperation of a single
+> private entity --- and no legal framework currently defines what happens when that
 > cooperation is withheld, delayed, or technically complicated. We
 > already know what it looks like when it happens. It looks like a naval
 > fleet that doesn\'t get sunk. Or a frontline that loses coordination
@@ -815,7 +818,7 @@ If the network owner decides --- for commercial, political, or personal
 reasons --- to activate units outside of government direction, the state
 has no technical mechanism to prevent it. The DPA is a government power
 over private capacity. There is no equivalent legal instrument that
-prevents a private actor from activating his own hardware in ways that
+prevents a private actor from activating its own hardware in ways that
 fall below the threshold of obvious illegality but above the threshold
 of normal commercial operation.
 
@@ -992,8 +995,8 @@ favorable to the attacker.
 
 **27. The H-1B Insider Vector**
 
-The workforce composition of Tesla, SpaceX, and xAI reflects Musk\'s
-stated preference for H-1B visa holders --- highly skilled engineers
+The workforce composition of Tesla, SpaceX, and xAI relies heavily on
+H-1B visa holders --- highly skilled engineers
 recruited internationally, disproportionately from India and China. The
 vast majority are exactly what they appear to be: talented engineers
 doing legitimate work. This is not an accusation against a workforce. It
@@ -1738,8 +1741,8 @@ frame carrying a payload. It cannot be adversarially prompted through a
 pixel pattern. It has no visual language model to manipulate. It sees
 geometry. Geometry cannot be socially engineered.
 
-Musk\'s public position on LIDAR has been stated across multiple Tesla
-AI Day presentations, interviews, and public posts: LIDAR is a crutch.
+Tesla\'s public position on LIDAR has been stated across multiple Tesla
+AI Day presentations and public statements: LIDAR is a crutch.
 Anyone relying on LIDAR is doomed. Biological intelligence navigates the
 world using vision --- therefore machine intelligence should too. Tesla
 removed ultrasonic sensors from vehicles in 2022, doubling down on pure
@@ -1747,7 +1750,7 @@ vision as philosophical commitment, not merely engineering preference.
 
 That decision was correct for cost. It was correct for manufacturing
 scalability. It was correct for the richness of the behavioral data
-asset it generates. It was correct for the philosophical framework Musk
+asset it generates. It was correct for the philosophical framework Tesla
 has articulated publicly.
 
 It created an attack surface with the following properties:
@@ -1914,7 +1917,7 @@ all:
     accountability to the observed
 
 -   The concentration of activation authority --- a single private
-    individual controlling the on switch for a military force with no
+    entity controlling the on switch for a military force with no
     legal framework governing what happens when that cooperation is
     withheld
 
