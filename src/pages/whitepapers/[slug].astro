@@ -1,0 +1,239 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { marked } from 'marked';
+import fs from 'node:fs';
+import path from 'node:path';
+
+const papers: Record<string, { title: string; file: string; pdf: string }> = {
+  'ip-ai-whitepaper': {
+    title: 'Functional Equivalence and the Limits of Law',
+    file: 'ip_ai_whitepaper.md',
+    pdf: '/whitepapers/ip_ai_whitepaper.pdf',
+  },
+  'optimus-network-analysis': {
+    title: 'The Optimus Network - Distributed Infrastructure & Vertical Integration',
+    file: 'optimus_network_analysis.md',
+    pdf: '/whitepapers/optimus_network_analysis.pdf',
+  },
+  'humanoid-robotics': {
+    title: 'Humanoid Robotics - The Robot Control Problem',
+    file: 'WHITEPAPER_HUMANOID_ROBOTICS.md',
+    pdf: '/whitepapers/GoPLC_Humanoid_Robotics_Whitepaper.pdf',
+  },
+  'clustering': {
+    title: 'Clustering - Distributed Real-Time PLC Performance',
+    file: 'whitepaper-clustering.md',
+    pdf: '/whitepapers/whitepaper-clustering.pdf',
+  },
+  'datacenter-gateway': {
+    title: 'Datacenter Gateway - Universal Protocol Gateway',
+    file: 'whitepaper-datacenter-gateway.md',
+    pdf: '/whitepapers/whitepaper-datacenter-gateway.pdf',
+  },
+  'dc-simulation-hardware': {
+    title: 'DC Simulation - Hardware Gateway Architecture',
+    file: 'WHITEPAPER_DC_SIMULATION_HARDWARE.md',
+    pdf: '/whitepapers/WHITEPAPER_DC_SIMULATION_HARDWARE.pdf',
+  },
+  'dc-simulation-virtual': {
+    title: 'DC Simulation - Virtualized Gateway Architecture',
+    file: 'WHITEPAPER_DC_SIMULATION_VIRTUAL.md',
+    pdf: '/whitepapers/WHITEPAPER_DC_SIMULATION_VIRTUAL.pdf',
+  },
+  'wtp-performance-report': {
+    title: 'Water Treatment Plant Simulation - Performance Report',
+    file: 'WTP_Performance_Report.md',
+    pdf: '/whitepapers/WTP_Performance_Report.pdf',
+  },
+};
+
+export function getStaticPaths() {
+  return [
+    'ip-ai-whitepaper',
+    'optimus-network-analysis',
+    'humanoid-robotics',
+    'clustering',
+    'datacenter-gateway',
+    'dc-simulation-hardware',
+    'dc-simulation-virtual',
+    'wtp-performance-report',
+  ].map((slug) => ({ params: { slug } }));
+}
+
+const { slug } = Astro.params;
+const paper = papers[slug!];
+
+if (!paper) {
+  return Astro.redirect('/whitepapers/');
+}
+
+const mdPath = path.join(process.cwd(), 'public', 'whitepapers', paper.file);
+let rawContent = fs.readFileSync(mdPath, 'utf-8');
+
+// Strip YAML frontmatter (LaTeX headers etc.)
+rawContent = rawContent.replace(/^---\n[\s\S]*?\n---\n/, '');
+
+const htmlContent = await marked.parse(rawContent);
+---
+
+<BaseLayout title={paper.title} description={`Read the full whitepaper: ${paper.title}`}>
+  <article class="whitepaper-article">
+    <!-- Top bar -->
+    <div class="bg-primary-dark text-white py-4">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <a href="/whitepapers/" class="text-gray-300 hover:text-white text-sm flex items-center gap-1 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          All White Papers
+        </a>
+        <a href={paper.pdf} target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-primary-dark font-semibold px-4 py-2 rounded-lg transition-colors text-sm">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm-1 2l5 5h-5V4zM6 20V4h5v7h7v9H6z"/></svg>
+          Download PDF
+        </a>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="prose prose-lg max-w-none" set:html={htmlContent} />
+    </div>
+
+    <!-- Footer bar -->
+    <div class="border-t border-gray-200 py-8">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <a href="/whitepapers/" class="text-accent hover:text-accent-dark font-medium flex items-center gap-1 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          Back to White Papers
+        </a>
+        <a href={paper.pdf} target="_blank" rel="noopener" class="text-accent hover:text-accent-dark font-medium flex items-center gap-2 transition-colors">
+          Download PDF
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm-1 2l5 5h-5V4zM6 20V4h5v7h7v9H6z"/></svg>
+        </a>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style is:global>
+  .whitepaper-article .prose {
+    color: #1a1a2e;
+    line-height: 1.8;
+  }
+  .whitepaper-article .prose h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 0.5rem;
+  }
+  .whitepaper-article .prose h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #2c6faa;
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 0.4rem;
+  }
+  .whitepaper-article .prose h3 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #2c6faa;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .whitepaper-article .prose h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #374151;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .whitepaper-article .prose p {
+    margin-bottom: 1.25rem;
+  }
+  .whitepaper-article .prose strong {
+    color: #1a1a2e;
+    font-weight: 600;
+  }
+  .whitepaper-article .prose em {
+    color: #374151;
+  }
+  .whitepaper-article .prose blockquote {
+    border-left: 4px solid #2c6faa;
+    background: #f0f7ff;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 0.5rem 0.5rem 0;
+    color: #1a1a2e;
+  }
+  .whitepaper-article .prose blockquote strong {
+    color: #2c6faa;
+  }
+  .whitepaper-article .prose ul,
+  .whitepaper-article .prose ol {
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+  }
+  .whitepaper-article .prose li {
+    margin-bottom: 0.5rem;
+  }
+  .whitepaper-article .prose table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+  }
+  .whitepaper-article .prose thead {
+    background: #1a1a2e;
+    color: white;
+  }
+  .whitepaper-article .prose th {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 600;
+  }
+  .whitepaper-article .prose td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .whitepaper-article .prose tbody tr:nth-child(even) {
+    background: #f9fafb;
+  }
+  .whitepaper-article .prose tbody tr:hover {
+    background: #f0f7ff;
+  }
+  .whitepaper-article .prose code {
+    background: #f3f4f6;
+    padding: 0.15rem 0.4rem;
+    border-radius: 0.25rem;
+    font-size: 0.875em;
+    color: #c7254e;
+  }
+  .whitepaper-article .prose pre {
+    background: #1a1a2e;
+    color: #e5e7eb;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+  }
+  .whitepaper-article .prose pre code {
+    background: none;
+    color: inherit;
+    padding: 0;
+  }
+  .whitepaper-article .prose hr {
+    border: none;
+    border-top: 2px solid #e5e7eb;
+    margin: 2rem 0;
+  }
+  .whitepaper-article .prose a {
+    color: #2c6faa;
+    text-decoration: underline;
+  }
+  .whitepaper-article .prose a:hover {
+    color: #1a4f7a;
+  }
+</style>
