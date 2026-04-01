@@ -1,19 +1,4 @@
----
-header-includes:
-  - \usepackage{booktabs}
-  - \usepackage{longtable}
-  - \usepackage{array}
-  - \usepackage{etoolbox}
-  - \usepackage{xcolor}
-  - \renewcommand{\arraystretch}{1.15}
-  - \AtBeginEnvironment{longtable}{\footnotesize}
-  - \AtBeginEnvironment{tabular}{\footnotesize}
-geometry: "left=0.55in,right=0.55in,top=0.65in,bottom=0.65in"
-fontsize: 9pt
----
-
 # GOPLC DC Simulation: Virtualized Gateway Architecture
-# Virtualized Gateway Architecture
 
 **Eliminating Edge Hardware with Server-Based Gateways and Routed VLANs**
 
