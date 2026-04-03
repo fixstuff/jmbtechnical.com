@@ -121,6 +121,8 @@ That's the point.
 
 ---
 
-*James Belcher is the founder of JMB Technical Services LLC and the author of "Functional Equivalence and the Limits of Law" (April 1, 2026) and "The Scenario Was Not Hypothetical" (April 3, 2026), both available at [jmbtechnical.com/whitepapers](https://jmbtechnical.com/whitepapers).*
+**Read the whitepapers:** [Functional Equivalence and the Limits of Law](/whitepapers/ip-ai-whitepaper/) (April 1, 2026) | [The Scenario Was Not Hypothetical](/whitepapers/ip-ai-whitepaper2/) (April 3, 2026)
+
+*James Belcher is the founder of JMB Technical Services LLC and the author of both whitepapers, available at [jmbtechnical.com/whitepapers](https://jmbtechnical.com/whitepapers).*
 
 *He also built an animatronic dachshund named Megabite that runs on a PLC runtime written in Go. Make of that what you will.*

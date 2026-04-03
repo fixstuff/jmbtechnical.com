@@ -231,6 +231,8 @@ That gap is not closing on its own. It widens with every new AI capability, ever
 
 ---
 
+**Related:** [KAIROS: At the Right Time](/blog/kairos-claude-code-leak) — a companion blog post exploring what the incident means for AI autonomy and attribution.
+
 *© 2026 JMB Technical Services LLC. All rights reserved.*  
 *JMB Technical Services LLC — Industrial Automation & Emerging Technology Consulting*  
 *[Back to White Papers](https://jmbtechnical.com/whitepapers/)*
