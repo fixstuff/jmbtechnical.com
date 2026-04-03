@@ -5,6 +5,12 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const papers: Record<string, { title: string; file: string; pdf: string; description?: string; ogImage?: string }> = {
+  'ip-ai-whitepaper2': {
+    title: 'The Scenario Was Not Hypothetical: The Claude Code Incident as a Live Case Study',
+    file: 'ip_ai_whitepaper2.md',
+    pdf: '/whitepapers/ip_ai_whitepaper2.pdf',
+    description: 'The original paper predicted a scenario. The scenario happened the day before the paper published. A post-mortem of the Claude Code source leak and the live failure of every IP enforcement mechanism.',
+  },
   'ip-ai-whitepaper': {
     title: 'Functional Equivalence and the Limits of Law: AI, Copyright, and Patent Law',
     file: 'ip_ai_whitepaper.md',
@@ -51,6 +57,7 @@ const papers: Record<string, { title: string; file: string; pdf: string; descrip
 
 export function getStaticPaths() {
   return [
+    'ip-ai-whitepaper2',
     'ip-ai-whitepaper',
     'optimus-network-analysis',
     'humanoid-robotics',
