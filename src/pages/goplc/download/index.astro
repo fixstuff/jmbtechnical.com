@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import GoplcNav from '../../../components/GoplcNav.astro';
+---
+
+<BaseLayout title="Download GOPLC" description="Download GOPLC — the industrial PLC runtime. Windows and Linux binaries available.">
+  <GoplcNav />
+
+  <!-- Header -->
+  <section class="bg-gray-950 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-6">
+        Download GOPLC
+      </h1>
+      <p class="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+        Get up and running in under a minute. Tell us who you are and the download links are yours.
+      </p>
+    </div>
+  </section>
+
+  <!-- Form -->
+  <section class="py-24">
+    <div class="max-w-lg mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-10">
+        <h2 class="text-2xl font-bold text-gray-900 mb-2">Get Your Free Demo</h2>
+        <p class="text-gray-500 mb-8">2-hour evaluation sessions, no license key required.</p>
+
+        <form action="https://formsubmit.co/4e27ed0ac437f95f30150e03e5a9f2a6" method="POST" class="space-y-5">
+          <input type="hidden" name="_subject" value="New GOPLC download request" />
+          <input type="hidden" name="_captcha" value="true" />
+          <input type="hidden" name="_next" value="https://jmbtechnical.com/goplc/download/thanks" />
+          <input type="text" name="_honey" style="display:none" />
+
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+            <input type="text" id="name" name="name" required
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-colors"
+              placeholder="Your name" />
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+            <input type="email" id="email" name="email" required
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-colors"
+              placeholder="you@company.com" />
+          </div>
+
+          <div>
+            <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Company <span class="text-gray-400">(optional)</span></label>
+            <input type="text" id="company" name="company"
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-colors"
+              placeholder="Your company" />
+          </div>
+
+          <div>
+            <label for="use_case" class="block text-sm font-medium text-gray-700 mb-1">What are you planning to use it for? <span class="text-gray-400">(optional)</span></label>
+            <input type="text" id="use_case" name="use_case"
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none transition-colors"
+              placeholder="e.g. evaluating for a project, learning PLCs, hobby" />
+          </div>
+
+          <button type="submit"
+            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+            Get Download Links
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
