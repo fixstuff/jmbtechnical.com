@@ -32,7 +32,7 @@ import GoplcNav from '../../components/GoplcNav.astro';
           <p class="text-gray-600 mb-8 flex-1">
             Single zip file. Unzip to any folder, double-click <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm">start-goplc.bat</code> to launch. No installer, no admin rights required.
           </p>
-          <a href="/download/goplc-v1.0.520-windows.zip"
+          <a href="https://goplc-downloads.jamesbel.workers.dev/goplc-v1.0.520-windows.zip"
              class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
             Download v1.0.520 (32 MB)
           </a>
@@ -48,13 +48,13 @@ import GoplcNav from '../../components/GoplcNav.astro';
             Native binaries for Intel/AMD and ARM (Raspberry Pi 4/5, Jetson, etc.). Extract, run <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm">./start-goplc.sh</code>, and the IDE opens automatically.
           </p>
           <div class="space-y-3">
-            <a href="/download/goplc-v1.0.520-linux-amd64.tar.gz"
+            <a href="https://goplc-downloads.jamesbel.workers.dev/goplc-v1.0.520-linux-amd64.tar.gz"
                class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
               x86_64 (32 MB)
             </a>
-            <a href="/download/goplc-v1.0.520-linux-arm64.tar.gz"
+            <a href="https://goplc-downloads.jamesbel.workers.dev/goplc-v1.0.520-linux-arm64.tar.gz"
                class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
-              ARM64 (62 MB)
+              ARM64 (31 MB)
             </a>
           </div>
         </div>
@@ -93,6 +93,23 @@ import GoplcNav from '../../components/GoplcNav.astro';
         <pre class="bg-gray-900 text-green-400 p-4 rounded-lg text-sm overflow-x-auto"><code>goplc --gcode job.gcode --target http://192.168.1.100:8080</code></pre>
         <p class="text-gray-500 text-sm mt-3">
           Supports xTool lasers (HTTP) and GRBL machines (serial). Free &mdash; no license needed for CLI mode.
+        </p>
+      </div>
+
+      <!-- File Verification -->
+      <div class="mt-8 bg-gray-50 rounded-2xl p-10 border border-gray-200">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">Verify Your Download</h3>
+        <p class="text-gray-700 mb-4">
+          Confirm file integrity with SHA-256 checksums:
+        </p>
+        <div class="space-y-3 font-mono text-xs bg-gray-900 text-gray-300 p-4 rounded-lg overflow-x-auto">
+          <div><span class="text-green-400">7e5df48f...e6936a3a</span>  goplc-v1.0.520-windows.zip</div>
+          <div><span class="text-green-400">7ee33dcc...9dd940c</span>  goplc-v1.0.520-linux-amd64.tar.gz</div>
+          <div><span class="text-green-400">2e6cac19...ca8059b4</span>  goplc-v1.0.520-linux-arm64.tar.gz</div>
+        </div>
+        <p class="text-gray-500 text-sm mt-3">
+          Windows: <code class="bg-gray-100 px-1.5 py-0.5 rounded">certutil -hashfile goplc-v1.0.520-windows.zip SHA256</code><br/>
+          Linux/Mac: <code class="bg-gray-100 px-1.5 py-0.5 rounded">sha256sum goplc-v1.0.520-*.tar.gz</code>
         </p>
       </div>
 
