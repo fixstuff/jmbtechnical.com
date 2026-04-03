@@ -3,6 +3,7 @@ const goplcNav = [
   { label: 'Overview', href: '/goplc' },
   { label: 'Features', href: '/goplc/features' },
   { label: 'Pricing', href: '/goplc/pricing' },
+  { label: 'Download', href: '/goplc/download' },
 ];
 const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/goplc';
 ---
@@ -27,7 +28,7 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/goplc';
         </a>
       ))}
       <div class="flex-1"></div>
-      <a href="/goplc/pricing" class="hidden sm:inline-flex bg-accent hover:bg-accent-dark text-primary-dark text-sm font-bold px-4 py-1.5 rounded-md transition-colors">
+      <a href="/goplc/download" class="hidden sm:inline-flex bg-accent hover:bg-accent-dark text-primary-dark text-sm font-bold px-4 py-1.5 rounded-md transition-colors">
         Get GOPLC
       </a>
     </div>

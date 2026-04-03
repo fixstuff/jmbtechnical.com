@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import GoplcNav from '../../components/GoplcNav.astro';
+---
+
+<BaseLayout title="Download GOPLC" description="Download GOPLC — the industrial PLC runtime. Windows and Linux binaries available.">
+  <GoplcNav />
+
+  <!-- Header -->
+  <section class="bg-gray-950 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-6">
+        Download GOPLC
+      </h1>
+      <p class="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+        Get up and running in under a minute. Unzip, double-click, done.
+      </p>
+    </div>
+  </section>
+
+  <!-- Download Cards -->
+  <section class="py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <!-- Windows -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-10 flex flex-col">
+          <div class="mb-6">
+            <h2 class="text-2xl font-bold text-gray-900 mb-2">Windows</h2>
+            <p class="text-gray-500">Windows 10/11 (64-bit)</p>
+          </div>
+          <p class="text-gray-600 mb-8 flex-1">
+            Single zip file. Unzip to any folder, double-click <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm">start-goplc.bat</code> to launch. No installer, no admin rights required.
+          </p>
+          <a href="/download/goplc-v1.0.520-windows.zip"
+             class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+            Download v1.0.520 (32 MB)
+          </a>
+        </div>
+
+        <!-- Linux -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-10 flex flex-col">
+          <div class="mb-6">
+            <h2 class="text-2xl font-bold text-gray-900 mb-2">Linux</h2>
+            <p class="text-gray-500">x86_64 and ARM64</p>
+          </div>
+          <p class="text-gray-600 mb-8 flex-1">
+            Native binaries for Intel/AMD and ARM (Raspberry Pi 4/5, Jetson, etc.). Extract and run with <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm">--api-port 8300</code>.
+          </p>
+          <span class="block w-full text-center bg-gray-300 text-gray-500 font-bold py-3 px-6 rounded-lg">
+            Coming Soon
+          </span>
+        </div>
+
+      </div>
+
+      <!-- Getting Started -->
+      <div class="mt-16 bg-gray-50 rounded-2xl p-10 border border-gray-200">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">Getting Started</h3>
+        <ol class="space-y-4 text-gray-700">
+          <li class="flex gap-3">
+            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm">1</span>
+            <span><strong>Download and unzip</strong> to any folder (e.g., <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm">C:\GOPLC</code>)</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm">2</span>
+            <span><strong>Double-click</strong> <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm">start-goplc.bat</code> &mdash; the IDE opens automatically</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm">3</span>
+            <span><strong>Start building</strong> &mdash; the included counter program runs immediately. Write ST code, connect protocols, monitor variables in real time.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm">4</span>
+            <span><strong>Activate your license</strong> &mdash; enter your license key in the IDE to unlock full functionality. Demo mode gives you 2 hours per session to evaluate.</span>
+          </li>
+        </ol>
+      </div>
+
+      <!-- G-code CLI -->
+      <div class="mt-8 bg-gray-50 rounded-2xl p-10 border border-gray-200">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">G-code CLI Mode</h3>
+        <p class="text-gray-700 mb-4">
+          Stream G-code files directly to your CNC, laser cutter, or 3D printer &mdash; no programming required:
+        </p>
+        <pre class="bg-gray-900 text-green-400 p-4 rounded-lg text-sm overflow-x-auto"><code>goplc --gcode job.gcode --target http://192.168.1.100:8080</code></pre>
+        <p class="text-gray-500 text-sm mt-3">
+          Supports xTool lasers (HTTP) and GRBL machines (serial). Free &mdash; no license needed for CLI mode.
+        </p>
+      </div>
+
+    </div>
+  </section>
+</BaseLayout>
