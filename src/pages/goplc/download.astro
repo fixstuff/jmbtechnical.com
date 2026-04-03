@@ -45,11 +45,18 @@ import GoplcNav from '../../components/GoplcNav.astro';
             <p class="text-gray-500">x86_64 and ARM64</p>
           </div>
           <p class="text-gray-600 mb-8 flex-1">
-            Native binaries for Intel/AMD and ARM (Raspberry Pi 4/5, Jetson, etc.). Extract and run with <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm">--api-port 8300</code>.
+            Native binaries for Intel/AMD and ARM (Raspberry Pi 4/5, Jetson, etc.). Extract, run <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm">./start-goplc.sh</code>, and the IDE opens automatically.
           </p>
-          <span class="block w-full text-center bg-gray-300 text-gray-500 font-bold py-3 px-6 rounded-lg">
-            Coming Soon
-          </span>
+          <div class="space-y-3">
+            <a href="/download/goplc-v1.0.520-linux-amd64.tar.gz"
+               class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+              x86_64 (32 MB)
+            </a>
+            <a href="/download/goplc-v1.0.520-linux-arm64.tar.gz"
+               class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+              ARM64 (62 MB)
+            </a>
+          </div>
         </div>
 
       </div>
