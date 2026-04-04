@@ -25,3 +25,4 @@ pnpm-debug.log*
 
 # license server — keep out of public repo
 workers/
+.wrangler/
