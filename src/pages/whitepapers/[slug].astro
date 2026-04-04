@@ -48,6 +48,12 @@ const papers: Record<string, { title: string; file: string; pdf: string; descrip
     file: 'WHITEPAPER_DC_SIMULATION_VIRTUAL.md',
     pdf: '/whitepapers/WHITEPAPER_DC_SIMULATION_VIRTUAL.pdf',
   },
+  'goplc-p2-guide': {
+    title: 'GoPLC + Parallax Propeller 2: Hardware Interface Guide',
+    file: 'goplc_p2_guide.md',
+    pdf: '/whitepapers/goplc_p2_guide.pdf',
+    description: 'Complete reference for controlling the Parallax Propeller 2 from GoPLC. 44 schema-driven commands, TAQOZ Forth direct serial control, cyclic exchange, and ST code examples for every peripheral.',
+  },
   'wtp-performance-report': {
     title: 'Water Treatment Plant Simulation - Performance Report',
     file: 'WTP_Performance_Report.md',
@@ -65,6 +71,7 @@ export function getStaticPaths() {
     'datacenter-gateway',
     'dc-simulation-hardware',
     'dc-simulation-virtual',
+    'goplc-p2-guide',
     'wtp-performance-report',
   ].map((slug) => ({ params: { slug } }));
 }
