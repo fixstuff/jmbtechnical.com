@@ -80,6 +80,7 @@ ${error ? '<p class="err">Incorrect password. Please try again.</p>' : ''}
 export default {
 	async fetch(request: Request, env: Env): Promise<Response> {
 		const url = new URL(request.url);
+
 		const gate = findProtected(url.pathname);
 
 		if (!gate) {
