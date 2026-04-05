@@ -21,42 +21,59 @@ import GoplcNav from '../../../components/GoplcNav.astro';
   <!-- Download Cards -->
   <section class="py-24">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 gap-8">
+      <!-- Linux x86_64 — Available Now -->
+      <div class="bg-white rounded-2xl shadow-sm border-2 border-blue-500 p-10 flex flex-col items-center text-center mb-12">
+        <div class="mb-6">
+          <h2 class="text-2xl font-bold text-gray-900 mb-2">Linux x86_64</h2>
+          <p class="text-gray-500">Intel/AMD desktops, servers, and VMs</p>
+        </div>
+        <p class="text-gray-600 mb-8 max-w-lg">
+          Self-contained tarball with bundled Node-RED. Extract, run <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm">./start-goplc.sh</code>, and the IDE opens automatically. Installs as a systemd service on first run.
+        </p>
+        <a href="https://goplc-downloads.jamesbel.workers.dev/goplc-v1.0.531-linux-amd64.tar.gz"
+           class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-lg transition-colors text-lg">
+          Download v1.0.531 (73 MB)
+        </a>
+      </div>
 
-        <!-- Windows -->
-        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-10 flex flex-col">
-          <div class="mb-6">
-            <h2 class="text-2xl font-bold text-gray-900 mb-2">Windows</h2>
-            <p class="text-gray-500">Windows 10/11 (64-bit)</p>
+      <!-- Coming Soon -->
+      <h3 class="text-xl font-bold text-gray-900 mb-6">Coming Soon</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <!-- Windows (coming soon) -->
+        <div class="relative bg-white rounded-2xl shadow-sm border border-gray-200 p-8 flex flex-col opacity-60">
+          <div class="absolute inset-0 bg-gray-100/70 rounded-2xl flex items-center justify-center z-10">
+            <span class="bg-gray-900 text-white text-sm font-bold px-4 py-2 rounded-full">Coming Soon</span>
           </div>
-          <p class="text-gray-600 mb-8 flex-1">
-            Single zip file. Unzip to any folder, double-click <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm">start-goplc.bat</code> to launch. No installer, no admin rights required.
+          <h2 class="text-xl font-bold text-gray-900 mb-2">Windows</h2>
+          <p class="text-gray-500 text-sm mb-4">Windows 10/11 (64-bit)</p>
+          <p class="text-gray-600 text-sm flex-1">
+            Single zip file. No installer, no admin rights required.
           </p>
-          <a href="https://goplc-downloads.jamesbel.workers.dev/goplc-v1.0.520-windows.zip"
-             class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
-            Download v1.0.520 (32 MB)
-          </a>
         </div>
 
-        <!-- Linux -->
-        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-10 flex flex-col">
-          <div class="mb-6">
-            <h2 class="text-2xl font-bold text-gray-900 mb-2">Linux</h2>
-            <p class="text-gray-500">x86_64 and ARM64</p>
+        <!-- ARM64 (coming soon) -->
+        <div class="relative bg-white rounded-2xl shadow-sm border border-gray-200 p-8 flex flex-col opacity-60">
+          <div class="absolute inset-0 bg-gray-100/70 rounded-2xl flex items-center justify-center z-10">
+            <span class="bg-gray-900 text-white text-sm font-bold px-4 py-2 rounded-full">Coming Soon</span>
           </div>
-          <p class="text-gray-600 mb-8 flex-1">
-            Native binaries for Intel/AMD and ARM (Raspberry Pi 4/5, Jetson, etc.). Extract, run <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm">./start-goplc.sh</code>, and the IDE opens automatically.
+          <h2 class="text-xl font-bold text-gray-900 mb-2">Linux ARM64</h2>
+          <p class="text-gray-500 text-sm mb-4">Raspberry Pi 4/5, Jetson, SBCs</p>
+          <p class="text-gray-600 text-sm flex-1">
+            Native ARM64 binary with bundled Node-RED.
           </p>
-          <div class="space-y-3">
-            <a href="https://goplc-downloads.jamesbel.workers.dev/goplc-v1.0.520-linux-amd64.tar.gz"
-               class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
-              x86_64 (32 MB)
-            </a>
-            <a href="https://goplc-downloads.jamesbel.workers.dev/goplc-v1.0.520-linux-arm64.tar.gz"
-               class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
-              ARM64 (31 MB)
-            </a>
+        </div>
+
+        <!-- ctrlX (coming soon) -->
+        <div class="relative bg-white rounded-2xl shadow-sm border border-gray-200 p-8 flex flex-col opacity-60">
+          <div class="absolute inset-0 bg-gray-100/70 rounded-2xl flex items-center justify-center z-10">
+            <span class="bg-gray-900 text-white text-sm font-bold px-4 py-2 rounded-full">Coming Soon</span>
           </div>
+          <h2 class="text-xl font-bold text-gray-900 mb-2">Bosch ctrlX CORE</h2>
+          <p class="text-gray-500 text-sm mb-4">ARM64 snap package</p>
+          <p class="text-gray-600 text-sm flex-1">
+            Snap for ctrlX CORE X3 controllers.
+          </p>
         </div>
 
       </div>
@@ -67,11 +84,11 @@ import GoplcNav from '../../../components/GoplcNav.astro';
         <ol class="space-y-4 text-gray-700">
           <li class="flex gap-3">
             <span class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm">1</span>
-            <span><strong>Download and unzip</strong> to any folder (e.g., <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm">C:\GOPLC</code>)</span>
+            <span><strong>Extract the tarball</strong> &mdash; <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm">tar xzf goplc-v1.0.531-linux-amd64.tar.gz</code></span>
           </li>
           <li class="flex gap-3">
             <span class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm">2</span>
-            <span><strong>Double-click</strong> <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm">start-goplc.bat</code> &mdash; the IDE opens automatically</span>
+            <span><strong>Run</strong> <code class="bg-gray-100 px-1.5 py-0.5 rounded text-sm">./start-goplc.sh</code> &mdash; the IDE opens automatically</span>
           </li>
           <li class="flex gap-3">
             <span class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm">3</span>
@@ -84,18 +101,6 @@ import GoplcNav from '../../../components/GoplcNav.astro';
         </ol>
       </div>
 
-      <!-- G-code CLI -->
-      <div class="mt-8 bg-gray-50 rounded-2xl p-10 border border-gray-200">
-        <h3 class="text-2xl font-bold text-gray-900 mb-4">G-code CLI Mode</h3>
-        <p class="text-gray-700 mb-4">
-          Stream G-code files directly to your CNC, laser cutter, or 3D printer &mdash; no programming required:
-        </p>
-        <pre class="bg-gray-900 text-green-400 p-4 rounded-lg text-sm overflow-x-auto"><code>goplc --gcode job.gcode --target http://192.168.1.100:8080</code></pre>
-        <p class="text-gray-500 text-sm mt-3">
-          Supports xTool lasers (HTTP) and GRBL machines (serial). Free &mdash; no license needed for CLI mode.
-        </p>
-      </div>
-
       <!-- File Verification -->
       <div class="mt-8 bg-gray-50 rounded-2xl p-10 border border-gray-200">
         <h3 class="text-2xl font-bold text-gray-900 mb-4">Verify Your Download</h3>
@@ -103,14 +108,30 @@ import GoplcNav from '../../../components/GoplcNav.astro';
           Confirm file integrity with SHA-256 checksums:
         </p>
         <div class="space-y-3 font-mono text-xs bg-gray-900 text-gray-300 p-4 rounded-lg overflow-x-auto">
-          <div><span class="text-green-400">7e5df48f...e6936a3a</span>  goplc-v1.0.520-windows.zip</div>
-          <div><span class="text-green-400">7ee33dcc...9dd940c</span>  goplc-v1.0.520-linux-amd64.tar.gz</div>
-          <div><span class="text-green-400">2e6cac19...ca8059b4</span>  goplc-v1.0.520-linux-arm64.tar.gz</div>
+          <div><span class="text-green-400">4168e74f...93774655</span>  goplc-v1.0.531-linux-amd64.tar.gz</div>
         </div>
         <p class="text-gray-500 text-sm mt-3">
-          Windows: <code class="bg-gray-100 px-1.5 py-0.5 rounded">certutil -hashfile goplc-v1.0.520-windows.zip SHA256</code><br/>
-          Linux/Mac: <code class="bg-gray-100 px-1.5 py-0.5 rounded">sha256sum goplc-v1.0.520-*.tar.gz</code>
+          <code class="bg-gray-100 px-1.5 py-0.5 rounded">sha256sum goplc-v1.0.531-linux-amd64.tar.gz</code>
         </p>
+      </div>
+
+      <!-- Need Help -->
+      <div class="mt-8 bg-gray-50 rounded-2xl p-10 border border-gray-200">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">Need Help?</h3>
+        <div class="space-y-3 text-gray-700">
+          <p class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-blue-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+            Download issues: <a href="mailto:downloads@jmbtechnical.com" class="text-blue-600 hover:underline font-medium">downloads@jmbtechnical.com</a>
+          </p>
+          <p class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-blue-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+            Technical support: <a href="mailto:support@jmbtechnical.com" class="text-blue-600 hover:underline font-medium">support@jmbtechnical.com</a>
+          </p>
+          <p class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-blue-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+            Licensing: <a href="mailto:licensing@jmbtechnical.com" class="text-blue-600 hover:underline font-medium">licensing@jmbtechnical.com</a>
+          </p>
+        </div>
       </div>
 
     </div>

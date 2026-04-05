@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import GoplcNav from '../../components/GoplcNav.astro';
 ---
 
-<BaseLayout title="GOPLC Pricing" description="GOPLC licensing: $500 per seat standard, $400 per seat for volume purchases. Enterprise options available.">
+<BaseLayout title="GOPLC Pricing — Indiegogo Launch" description="GOPLC Indiegogo launch pricing: lifetime licenses from $49. Limited time early-backer tiers available now.">
   <GoplcNav />
 
   <!-- Header -->
@@ -19,138 +19,248 @@ import GoplcNav from '../../components/GoplcNav.astro';
     </div>
   </section>
 
-  <!-- Pricing Cards -->
-  <section class="py-24">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-3 gap-8">
+  <!-- Indiegogo Banner -->
+  <section class="relative bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="text-white">
+        <div class="text-sm font-bold uppercase tracking-widest mb-2">Limited Time &mdash; Indiegogo Launch Pricing</div>
+        <div class="text-3xl md:text-4xl font-extrabold">Up to 90% off retail pricing</div>
+        <p class="text-white/80 mt-2 text-lg">GOPLC is available exclusively through Indiegogo during the campaign. Back now to lock in these prices.</p>
+      </div>
+    </div>
+  </section>
 
-        <!-- Standard -->
-        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-10 flex flex-col">
-          <div class="mb-8">
-            <h2 class="text-xl font-bold text-primary-dark mb-2">Standard</h2>
-            <p class="text-text-light text-sm">For individual engineers and small teams</p>
-          </div>
-          <div class="mb-8">
-            <div class="flex items-baseline gap-1">
-              <span class="text-5xl font-extrabold text-primary-dark">$500</span>
-              <span class="text-text-light text-lg">/ seat</span>
+  <!-- Old Pricing — Crossed Out -->
+  <section class="py-16 bg-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="relative rounded-2xl border-2 border-dashed border-gray-300 bg-white p-10 opacity-50">
+        <!-- Big X overlay -->
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
+          <svg class="w-full h-full text-red-500/30" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <line x1="0" y1="0" x2="100" y2="100" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke" />
+            <line x1="100" y1="0" x2="0" y2="100" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke" />
+          </svg>
+        </div>
+        <div class="text-center">
+          <p class="text-sm text-gray-400 uppercase tracking-wide font-bold mb-4">Previous Retail Pricing</p>
+          <div class="flex flex-wrap justify-center gap-8 text-gray-400">
+            <div>
+              <span class="text-3xl font-extrabold line-through">$500</span>
+              <span class="text-sm block">Standard</span>
             </div>
-            <p class="text-text-light text-sm mt-2">Lifetime license</p>
+            <div>
+              <span class="text-3xl font-extrabold line-through">$400</span>
+              <span class="text-sm block">Volume</span>
+            </div>
+            <div>
+              <span class="text-3xl font-extrabold line-through">Custom</span>
+              <span class="text-sm block">Enterprise</span>
+            </div>
           </div>
-          <ul class="space-y-4 mb-10 flex-1">
-            <li class="flex items-start gap-3 text-sm text-text">
-              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Indiegogo Pricing Cards -->
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4">Indiegogo Launch Tiers</h2>
+        <p class="text-lg text-text-light max-w-2xl mx-auto">
+          These prices are only available during the Indiegogo campaign. Every tier includes all features, all drivers, and all future updates.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+
+        <!-- Signal -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 flex flex-col">
+          <div class="mb-6">
+            <h2 class="text-lg font-bold text-primary-dark mb-1">Signal</h2>
+            <p class="text-text-light text-xs">Early-bird single seat</p>
+          </div>
+          <div class="mb-6">
+            <div class="flex items-baseline gap-1">
+              <span class="text-4xl font-extrabold text-primary-dark">$49</span>
+            </div>
+            <p class="text-text-light text-xs mt-1">Campaign pricing &bull; 1 seat</p>
+            <p class="text-red-500 text-xs font-semibold mt-1">90% off retail</p>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1 text-sm text-text">
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
               Full GOPLC runtime
             </li>
-            <li class="flex items-start gap-3 text-sm text-text">
-              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-              All 14+ protocol drivers
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              All protocol drivers
             </li>
-            <li class="flex items-start gap-3 text-sm text-text">
-              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-              Web IDE, debugger, HMI builder
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Web IDE &amp; debugger
             </li>
-            <li class="flex items-start gap-3 text-sm text-text">
-              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-              AI code generation (BYOK)
-            </li>
-            <li class="flex items-start gap-3 text-sm text-text">
-              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-              Boss/Minion clustering
-            </li>
-            <li class="flex items-start gap-3 text-sm text-text">
-              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-              Node-RED integration
-            </li>
-            <li class="flex items-start gap-3 text-sm text-text">
-              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
               Email support
             </li>
           </ul>
-          <a href="/contact" class="block text-center bg-primary-dark hover:bg-primary text-white font-bold py-3 rounded-lg transition-colors">
-            Get Started
+          <a href="https://www.indiegogo.com/en/projects/fixstuff555/goplc-the-plc-runtime-built-for-the-ai-age" target="_blank" rel="noopener" class="block text-center bg-primary-dark hover:bg-primary text-white font-bold py-3 rounded-lg transition-colors text-sm">
+            Back This Tier
           </a>
         </div>
 
-        <!-- Volume - Featured -->
-        <div class="bg-white rounded-2xl shadow-xl border-2 border-accent p-10 flex flex-col relative">
-          <div class="absolute -top-4 left-1/2 -translate-x-1/2">
-            <span class="bg-accent text-primary-dark text-sm font-bold px-4 py-1.5 rounded-full">Best Value</span>
+        <!-- Control -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 flex flex-col">
+          <div class="mb-6">
+            <h2 class="text-lg font-bold text-primary-dark mb-1">Control</h2>
+            <p class="text-text-light text-xs">For hands-on engineers</p>
           </div>
-          <div class="mb-8">
-            <h2 class="text-xl font-bold text-primary-dark mb-2">Volume</h2>
-            <p class="text-text-light text-sm">For teams purchasing 5 or more seats</p>
-          </div>
-          <div class="mb-8">
+          <div class="mb-6">
             <div class="flex items-baseline gap-1">
-              <span class="text-5xl font-extrabold text-primary-dark">$400</span>
-              <span class="text-text-light text-lg">/ seat</span>
+              <span class="text-4xl font-extrabold text-primary-dark">$99</span>
             </div>
-            <p class="text-text-light text-sm mt-2">Lifetime license &bull; Minimum 5 seats</p>
+            <p class="text-text-light text-xs mt-1">Campaign pricing &bull; 1 seat</p>
+            <p class="text-red-500 text-xs font-semibold mt-1">80% off retail</p>
           </div>
-          <ul class="space-y-4 mb-10 flex-1">
-            <li class="flex items-start gap-3 text-sm text-text font-medium">
-              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-              Everything in Standard
+          <ul class="space-y-3 mb-8 flex-1 text-sm text-text">
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Everything in Signal
             </li>
-            <li class="flex items-start gap-3 text-sm text-text">
-              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-              20% volume discount
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              HMI builder
             </li>
-            <li class="flex items-start gap-3 text-sm text-text">
-              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              AI code generation (BYOK)
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
               Priority email support
             </li>
-            <li class="flex items-start gap-3 text-sm text-text">
-              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-              Centralized license management
-            </li>
           </ul>
-          <a href="/contact" class="block text-center bg-accent hover:bg-accent-dark text-primary-dark font-bold py-3 rounded-lg transition-colors">
-            Contact for Volume Pricing
+          <a href="https://www.indiegogo.com/en/projects/fixstuff555/goplc-the-plc-runtime-built-for-the-ai-age" target="_blank" rel="noopener" class="block text-center bg-primary-dark hover:bg-primary text-white font-bold py-3 rounded-lg transition-colors text-sm">
+            Back This Tier
           </a>
         </div>
 
-        <!-- Enterprise -->
-        <div class="bg-primary-dark rounded-2xl shadow-sm border border-gray-700 p-10 flex flex-col text-white">
-          <div class="mb-8">
-            <h2 class="text-xl font-bold mb-2">Enterprise</h2>
-            <p class="text-gray-400 text-sm">For large-scale deployments and OEMs</p>
+        <!-- Supervisor — Featured -->
+        <div class="bg-white rounded-2xl shadow-xl border-2 border-accent p-8 flex flex-col relative">
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+            <span class="bg-accent text-primary-dark text-xs font-bold px-4 py-1.5 rounded-full">Most Popular</span>
           </div>
-          <div class="mb-8">
-            <div class="text-5xl font-extrabold">Custom</div>
-            <p class="text-gray-400 text-sm mt-2">Tailored to your deployment</p>
+          <div class="mb-6">
+            <h2 class="text-lg font-bold text-primary-dark mb-1">Supervisor</h2>
+            <p class="text-text-light text-xs">The complete package</p>
           </div>
-          <ul class="space-y-4 mb-10 flex-1">
-            <li class="flex items-start gap-3 text-sm text-gray-300 font-medium">
-              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-              Everything in Volume
+          <div class="mb-6">
+            <div class="flex items-baseline gap-1">
+              <span class="text-4xl font-extrabold text-primary-dark">$149</span>
+            </div>
+            <p class="text-text-light text-xs mt-1">Campaign pricing &bull; 1 seat</p>
+            <p class="text-red-500 text-xs font-semibold mt-1">70% off retail</p>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1 text-sm text-text">
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Everything in Control
             </li>
-            <li class="flex items-start gap-3 text-sm text-gray-300">
-              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-              OEM / embedding licensing
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Boss/Minion clustering
             </li>
-            <li class="flex items-start gap-3 text-sm text-gray-300">
-              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-              Custom protocol driver development
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Node-RED integration
             </li>
-            <li class="flex items-start gap-3 text-sm text-gray-300">
-              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-              Dedicated support channel
-            </li>
-            <li class="flex items-start gap-3 text-sm text-gray-300">
-              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-              Architecture consulting
-            </li>
-            <li class="flex items-start gap-3 text-sm text-gray-300">
-              <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-              Site license options
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Backer name in credits
             </li>
           </ul>
-          <a href="/contact" class="block text-center border border-accent text-accent hover:bg-accent hover:text-primary-dark font-bold py-3 rounded-lg transition-colors">
-            Contact Sales
+          <a href="https://www.indiegogo.com/en/projects/fixstuff555/goplc-the-plc-runtime-built-for-the-ai-age" target="_blank" rel="noopener" class="block text-center bg-accent hover:bg-accent-dark text-primary-dark font-bold py-3 rounded-lg transition-colors text-sm">
+            Back This Tier
           </a>
         </div>
+
+        <!-- Infinity -->
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 flex flex-col">
+          <div class="mb-6">
+            <h2 class="text-lg font-bold text-primary-dark mb-1">Infinity</h2>
+            <p class="text-text-light text-xs">Multi-seat for teams</p>
+          </div>
+          <div class="mb-6">
+            <div class="flex items-baseline gap-1">
+              <span class="text-4xl font-extrabold text-primary-dark">$299</span>
+            </div>
+            <p class="text-text-light text-xs mt-1">Campaign pricing &bull; 3 seats</p>
+            <p class="text-red-500 text-xs font-semibold mt-1">80% off retail</p>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1 text-sm text-text">
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Everything in Supervisor
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              3 runtime instances
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Centralized license management
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Priority email support
+            </li>
+          </ul>
+          <a href="https://www.indiegogo.com/en/projects/fixstuff555/goplc-the-plc-runtime-built-for-the-ai-age" target="_blank" rel="noopener" class="block text-center bg-primary-dark hover:bg-primary text-white font-bold py-3 rounded-lg transition-colors text-sm">
+            Back This Tier
+          </a>
+        </div>
+
+        <!-- Architect -->
+        <div class="bg-primary-dark rounded-2xl shadow-sm border border-gray-700 p-8 flex flex-col text-white">
+          <div class="mb-6">
+            <h2 class="text-lg font-bold mb-1">Architect</h2>
+            <p class="text-gray-400 text-xs">Enterprise early-access</p>
+          </div>
+          <div class="mb-6">
+            <div class="flex items-baseline gap-1">
+              <span class="text-4xl font-extrabold">$999</span>
+            </div>
+            <p class="text-gray-400 text-xs mt-1">Campaign pricing &bull; 10 seats</p>
+            <p class="text-red-400 text-xs font-semibold mt-1">80% off retail</p>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1 text-sm text-gray-300">
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Everything in Infinity
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              10 runtime instances
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Dedicated support channel
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Architecture consulting session
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Logo on backer wall
+            </li>
+          </ul>
+          <a href="https://www.indiegogo.com/en/projects/fixstuff555/goplc-the-plc-runtime-built-for-the-ai-age" target="_blank" rel="noopener" class="block text-center border border-accent text-accent hover:bg-accent hover:text-primary-dark font-bold py-3 rounded-lg transition-colors text-sm">
+            Back This Tier
+          </a>
+        </div>
+
       </div>
     </div>
   </section>
@@ -255,8 +365,8 @@ import GoplcNav from '../../components/GoplcNav.astro';
           <h3 class="text-xl font-bold text-green-700 mb-6">GOPLC</h3>
           <div class="space-y-4 text-sm">
             <div class="flex justify-between">
-              <span class="text-green-800">GOPLC License</span>
-              <span class="text-green-700 font-bold">$500</span>
+              <span class="text-green-800">GOPLC License (Indiegogo campaign)</span>
+              <span class="text-green-700 font-bold">From $49*</span>
             </div>
             <div class="flex justify-between">
               <span class="text-green-800">Web IDE &amp; Debugger</span>
@@ -276,7 +386,7 @@ import GoplcNav from '../../components/GoplcNav.astro';
             </div>
             <div class="border-t border-green-300 pt-4 flex justify-between font-bold text-green-900">
               <span>Lifetime Total</span>
-              <span>$500</span>
+              <span>From $49*</span>
             </div>
           </div>
         </div>
@@ -324,10 +434,10 @@ import GoplcNav from '../../components/GoplcNav.astro';
       <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Get Started?</h2>
       <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
         Try GOPLC free with the 2-hour demo mode. No credit card, no sign-up.
-        When you're ready, a lifetime license is just $500.
+        GOPLC is only available through our Indiegogo campaign. Lock in these prices before the campaign ends.
       </p>
-      <a href="/contact" class="bg-accent hover:bg-accent-dark text-primary-dark font-bold px-10 py-4 rounded-lg transition-colors text-lg inline-block">
-        Contact Us to Purchase
+      <a href="https://www.indiegogo.com/en/projects/fixstuff555/goplc-the-plc-runtime-built-for-the-ai-age" target="_blank" rel="noopener" class="bg-accent hover:bg-accent-dark text-primary-dark font-bold px-10 py-4 rounded-lg transition-colors text-lg inline-block">
+        Back Us on Indiegogo
       </a>
     </div>
   </section>
